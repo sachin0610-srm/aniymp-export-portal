@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About Us | ANIYMP INTERNATIONAL</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&amp;family=Noto+Serif:wght@400;500;600;700&amp;family=Noto+Sans+SC:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#5a4400",
+                        "tertiary-container": "#4c3900",
+                        "primary-fixed": "#c1ecd4",
+                        "inverse-on-surface": "#f2f1ed",
+                        "on-tertiary-container": "#c4a24c",
+                        "surface-container-highest": "#e3e2df",
+                        "on-primary-container": "#86af99",
+                        "primary-fixed-dim": "#a5d0b9",
+                        "secondary": "#7f5533",
+                        "surface-container-low": "#f4f4f0",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error": "#ffffff",
+                        "tertiary": "#322400",
+                        "on-primary": "#ffffff",
+                        "inverse-primary": "#a5d0b9",
+                        "surface-tint": "#3f6653",
+                        "on-secondary-fixed-variant": "#643e1e",
+                        "surface-cream": "#FDFCF8",
+                        "on-background": "#1b1c1a",
+                        "secondary-container": "#ffc69b",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed-variant": "#274e3d",
+                        "surface-bright": "#faf9f5",
+                        "tertiary-fixed": "#ffdf96",
+                        "on-secondary-fixed": "#2f1500",
+                        "background": "#faf9f5",
+                        "outline": "#717973",
+                        "border-subtle": "#E5E1D8",
+                        "surface-container": "#efeeea",
+                        "text-main": "#333333",
+                        "on-secondary-container": "#7a502e",
+                        "secondary-fixed": "#ffdcc3",
+                        "surface-variant": "#e3e2df",
+                        "secondary-fixed-dim": "#f3bb91",
+                        "surface": "#faf9f5",
+                        "on-surface-variant": "#414844",
+                        "primary-container": "#1b4332",
+                        "on-primary-fixed": "#002114",
+                        "primary": "#012d1d",
+                        "on-tertiary-fixed": "#251a00",
+                        "tertiary-fixed-dim": "#e7c268",
+                        "on-surface": "#1b1c1a",
+                        "error-container": "#ffdad6",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "surface-container-high": "#e9e8e4",
+                        "surface-dim": "#dbdad6",
+                        "on-error-container": "#93000a",
+                        "inverse-surface": "#2f312e",
+                        "outline-variant": "#c1c8c2"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "margin-mobile": "20px",
+                        "stack-md": "24px",
+                        "margin-desktop": "64px",
+                        "container-max": "1280px",
+                        "stack-sm": "12px",
+                        "unit": "8px",
+                        "stack-lg": "48px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Noto Serif"],
+                        "headline-md": ["Noto Serif"],
+                        "body-lg": ["IBM Plex Sans"],
+                        "headline-lg-mobile": ["Noto Serif"],
+                        "chinese-body": ["Noto Sans SC"],
+                        "label-caps": ["IBM Plex Sans"],
+                        "headline-xl": ["Noto Serif"],
+                        "body-sm": ["IBM Plex Sans"],
+                        "body-md": ["IBM Plex Sans"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "500"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "chinese-body": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(229, 225, 216, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="bg-surface sticky top-0 z-50 border-b border-subtle">
+<div class="max-w-container-max mx-auto px-margin-desktop flex justify-between items-center h-20">
+<div class="font-headline-md text-headline-md font-bold text-primary">
+                ANIYMP INTERNATIONAL
+            </div>
+<nav class="hidden md:flex gap-8 items-center h-full">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Home</a>
+<a class="text-primary border-b-2 border-primary font-semibold py-7" href="#">About Us</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Products</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Quality</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Certifications</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Contact</a>
+</nav>
+<div class="flex items-center gap-6">
+<button class="hidden lg:block text-on-surface-variant hover:text-primary font-body-md">EN / 中文</button>
+<button class="bg-primary text-on-primary px-6 py-2.5 font-body-md rounded-lg scale-95 active:opacity-80 transition-all">Request a Quote</button>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section: Identity & Scale -->
+<section class="relative h-[614px] flex items-center overflow-hidden bg-primary-container">
+<div class="absolute inset-0 opacity-40">
+<img class="w-full h-full object-cover" data-alt="A high-resolution, cinematic wide shot of a traditional spice market in India, featuring meticulously organized mounds of colorful turmeric, chili, and cardamom. The lighting is warm and natural, casting soft shadows that highlight the textures of the raw spices. The overall aesthetic is professional and premium, utilizing a dark green and golden color palette to evoke a sense of heritage and global trade authority." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbr-B9XAk-7jBOxyEoospLItBUQ4I3O-_ryqoPrltvL5kCMYdIG3c1eVwyTziKYk-nu5U4PL5Pv7Z14Dna2w9jOWccGdMLjfGTn2DboCOGovIN5xOOreqKit0jPcsJ6VVxBEcqz7MrrpT7ijbwNV93XGMVqDQf_NK_SZZHJHGwp3DyGDpyodHrOWGMzH5LfvMtaYL69bDYgGZfgbijLlX8yqqDyfmRvtakUFWwHGkoTyNdY0vBHWAZrX8J1J4ye8ehFSkVYjHXBac"/>
+</div>
+<div class="relative max-w-container-max mx-auto px-margin-desktop w-full">
+<div class="max-w-2xl text-on-primary">
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-on-primary-container mb-4 block">Established Oct 2020</span>
+<h1 class="font-headline-xl text-headline-xl mb-6">Curating India's Finest Spices for Global Trade</h1>
+<p class="font-body-lg text-body-lg text-on-primary-container leading-relaxed">
+                        Anonymity to prominence: ANIYMP INTERNATIONAL bridges the gap between heritage farms and global industrial needs with scientific rigor.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Company Stats & Registry -->
+<section class="py-stack-lg border-b border-subtle bg-surface-cream">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="border-l-2 border-primary pl-6">
+<p class="font-label-caps text-label-caps text-secondary uppercase mb-2">Corporate Identity</p>
+<p class="font-body-md text-body-md font-bold mb-1">CIN: U74999TN2020PTC139080</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Incorporated in Chennai, Tamil Nadu</p>
+</div>
+<div class="border-l-2 border-primary pl-6">
+<p class="font-label-caps text-label-caps text-secondary uppercase mb-2">Primary Markets</p>
+<p class="font-body-md text-body-md font-bold mb-1">China, ASEAN, Europe</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">China-market documentation readiness</p>
+</div>
+<div class="border-l-2 border-primary pl-6">
+<p class="font-label-caps text-label-caps text-secondary uppercase mb-2">Global Logistics</p>
+<p class="font-body-md text-body-md font-bold mb-1">Port-to-Port Excellence</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Secure, Traceable Supply Chain Management</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Mission & Vision: Bento Grid -->
+<section class="py-stack-lg">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="bento-grid">
+<!-- Vision -->
+<div class="col-span-12 md:col-span-7 bg-surface-container-low p-10 flex flex-col justify-between border border-subtle group hover:border-primary transition-colors duration-300">
+<div>
+<span class="material-symbols-outlined text-primary mb-6 text-4xl">visibility</span>
+<h2 class="font-headline-lg text-headline-lg mb-4">Our Vision</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                            To become a trusted Indian agro-products and spices partner for international buyers through reliable sourcing, careful handling, and transparent documentation.
+                            </p>
+</div>
+<div class="mt-8 flex items-center text-primary font-semibold">
+<span class="text-sm uppercase tracking-widest">Global Leadership</span>
+<div class="h-px flex-grow bg-outline-variant ml-4"></div>
+</div>
+</div>
+<!-- Mission -->
+<div class="col-span-12 md:col-span-5 bg-primary p-10 text-on-primary">
+<span class="material-symbols-outlined text-tertiary-fixed mb-6 text-4xl">rocket_launch</span>
+<h2 class="font-headline-lg text-headline-lg mb-4 text-on-primary-container">Our Mission</h2>
+<p class="font-body-md text-body-md leading-relaxed opacity-90">
+                            We support global food manufacturers and distributors with selected Indian spices, practical documentation, traceability support, and buyer-focused export preparation.
+                        </p>
+</div>
+<!-- Quality Commitment Card -->
+<div class="col-span-12 md:col-span-4 border border-subtle p-8 flex flex-col items-start bg-white">
+<span class="material-symbols-outlined text-secondary mb-4">verified</span>
+<h3 class="font-headline-md text-headline-md mb-2">Quality First</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                            Product documentation and relevant test reports can be shared with qualified buyers on request.
+                        </p>
+</div>
+<!-- Export Focus -->
+<div class="col-span-12 md:col-span-8 border border-subtle overflow-hidden flex flex-col md:flex-row bg-white">
+<div class="md:w-1/2 p-8">
+<h3 class="font-headline-md text-headline-md mb-4">Global Export Focus</h3>
+<ul class="space-y-3">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+<span class="font-body-sm">China-market documentation readiness</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+<span class="font-body-sm">Buyer-specific documentation review</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+<span class="font-body-sm">Optimized Sea-Freight Logistics</span>
+</li>
+</ul>
+</div>
+<div class="md:w-1/2 min-h-[200px]">
+<img class="w-full h-full object-cover" data-alt="A professional, top-down photograph of industrial spice shipping containers and polished wooden pallets in a clean, modern logistics warehouse. The lighting is bright and industrial, emphasizing efficiency and cleanliness. The scene represents global trade and export readiness, with a color palette that aligns with professional B2B services, using deep forest greens and neutral creams." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAULdkF1xkpav-yEH4bJ3FdwawnbaAQBWcirZ_J5vdUfHKClnO8RYW5Y-lCS9BBRkIAeeUmgPqs1q-N15u393HVWcGF6X400IVTqS2Bu3TMf96c3S8QeHh38SCG_XoQ2AKD0a7kTPOM88lJbwrfgAddPtZMZIqTwa-RsbDANrRNWFGu0GBNVzgWnrj_rATG6Nsejv4LfYABagSUvyeQKPdpV9RBq7nplLBU6mztXbfR-XIoJTEpH6UQXZgpR-eQlfCDx2ciy7_SGSo"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- China Market Readiness Section -->
+<section class="py-stack-lg bg-surface-container">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="flex flex-col lg:flex-row gap-16 items-center">
+<div class="lg:w-1/2">
+<div class="bg-primary-container p-2 inline-block mb-6">
+<span class="text-on-primary-container font-chinese-body">中国市场就绪</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg mb-6">Specialized for the Chinese Market</h2>
+<div class="space-y-6 font-body-md text-on-surface-variant leading-relaxed">
+<p>
+                                ANIYMP INTERNATIONAL recognizes the strategic importance of the China market. We have developed a dedicated compliance framework to handle <strong>GACC registration</strong> and <strong>CIQ inspections</strong> with precision.
+                            </p>
+<p>
+                                Our team includes Mandarin-literate trade specialists who bridge the communication gap, ensuring that product specifications, labeling, and documentation are perfectly aligned with Chinese regulatory standards.
+                            </p>
+</div>
+<div class="mt-10 grid grid-cols-2 gap-4">
+<div class="p-4 border border-outline-variant bg-surface">
+<p class="font-headline-md text-primary">100%</p>
+<p class="font-label-caps text-secondary">Documentation Accuracy</p>
+</div>
+<div class="p-4 border border-outline-variant bg-surface">
+<p class="font-headline-md text-primary">Direct</p>
+<p class="font-label-caps text-secondary">Sourcing Control</p>
+</div>
+</div>
+</div>
+<div class="lg:w-1/2 grid grid-cols-2 gap-4">
+<div class="aspect-square">
+<img class="w-full h-full object-cover" data-alt="A macro photograph showing the rich texture of high-quality Indian red chili powder. The image is captured with professional studio lighting that emphasizes the vibrant red color and fine grind. The background is a clean, neutral surface that evokes a sense of purity and food-grade safety, fitting for a scholarly B2B brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7L3JHONiiywT1vbdza6JZfGh7NzoVB_q9_ivsvuELcKDgcs_B3-9G8lfVtN5vgARtD3qc-EM5Gzpy6aUCCj5C9sYSZYQ6lOaMv2_rWeJvu8Yuw8otVg-GQRRNTOPFtryQljoE6akkVJ2coxzIWUe9y27LJ2poZWQHbvWWwj0ctMeDPd5xD0Dd8Ch89PaRT25yUZWH73G32djlBjx8t5mkQD7z55jcaTIKhYPNDtKc50uQMwdMC3jD4qvtWH_UG6WsIIP-XitD-H8"/>
+</div>
+<div class="aspect-square mt-8">
+<img class="w-full h-full object-cover" data-alt="A clean, scientific laboratory setting where a technician is inspecting whole black pepper seeds. The environment is sterile and professional, with stainless steel equipment and soft, diffused overhead lighting. This image communicates the intellectual rigor and quality control commitment of a premium spice exporter." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMZMX3I0A2iXH1AVSfsQDZ0_Aq5giViPHM-EhpaIGY3lFGsChO3-bWSqFi18BcoSAORcr29oAgq-6lPLP5uKZxOI3EBco1VdmyxuYx6-NkPwVrNzjVYil2L9KgDmIk4tjCEHU5n6gAEwd61FAYNd3cXIOJtSxv-4HtfuM0gHUcabg3U-NH3g2jV0xqtNR3u2s5DXTySq-MEbzIlxQj5fTCuLv8BJI9_feFKqUlkATraLr7kllwNisv3QiIpRcOwhZrUEsAkFeYbmA"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Company Contact & Address -->
+<section class="py-stack-lg border-t border-subtle">
+<div class="max-w-container-max mx-auto px-margin-desktop text-center">
+<h2 class="font-headline-lg text-headline-lg mb-12">Registered Headquarters</h2>
+<div class="max-w-3xl mx-auto glass-card p-12 relative">
+<span class="material-symbols-outlined text-primary text-5xl mb-6">location_on</span>
+<address class="not-italic">
+<p class="font-body-lg text-body-lg font-bold mb-2">ANIYMP INTERNATIONAL PRIVATE LIMITED</p>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-sm mx-auto mb-8">
+                            No. 81A, Sri Krishna Builders, 5th Street, Barathi Nagar, West Tambaram, Old Perungalathur, Tamil Nadu 600063, India.
+                        </p>
+</address>
+<div class="flex flex-col md:flex-row justify-center gap-8 items-center border-t border-subtle pt-8">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">mail</span>
+<span class="font-body-sm">trade@aniymp.com</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">phone_in_talk</span>
+<span class="font-body-sm">+91 44 XXXX XXXX</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary text-on-primary">
+<div class="max-w-container-max mx-auto px-margin-desktop py-stack-lg">
+<div class="flex flex-col md:flex-row justify-between items-start gap-12">
+<div class="max-w-xs">
+<h3 class="font-headline-md text-headline-md text-on-primary-container mb-4">ANIYMP INTERNATIONAL</h3>
+<p class="font-body-sm text-body-sm text-on-primary-fixed-variant leading-relaxed">
+                        Indian spices for the global industrial food supply chain. Export and compliance documents are shared with qualified buyers on request.
+                    </p>
+</div>
+<div class="grid grid-cols-2 gap-x-16 gap-y-4">
+<a class="text-on-primary-fixed-variant hover:text-on-primary hover:underline decoration-secondary transition-all font-body-sm" href="#">Privacy Policy</a>
+<a class="text-on-primary-fixed-variant hover:text-on-primary hover:underline decoration-secondary transition-all font-body-sm" href="#">Terms of Service</a>
+<a class="text-on-primary-fixed-variant hover:text-on-primary hover:underline decoration-secondary transition-all font-body-sm" href="#">Compliance</a>
+<a class="text-on-primary-fixed-variant hover:text-on-primary hover:underline decoration-secondary transition-all font-body-sm" href="#">Sitemap</a>
+<a class="text-on-primary-fixed-variant hover:text-on-primary hover:underline decoration-secondary transition-all font-body-sm col-span-2" href="#">Global Trade Policy</a>
+</div>
+</div>
+<div class="mt-16 pt-8 border-t border-primary-container flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-body-sm text-body-sm opacity-60">© 2024 ANIYMP INTERNATIONAL. CIN: U74999TN2020PTC139080. All Rights Reserved.</p>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-on-primary opacity-60 hover:opacity-100 cursor-pointer">public</span>
+<span class="material-symbols-outlined text-on-primary opacity-60 hover:opacity-100 cursor-pointer">description</span>
+<span class="material-symbols-outlined text-on-primary opacity-60 hover:opacity-100 cursor-pointer">verified_user</span>
+</div>
+</div>
+</div>
+</footer>
+<!-- Simple Hover Interactivity -->
+<script>
+        document.querySelectorAll('.bento-grid > div').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-4px)';
+                card.style.transition = 'all 0.3s ease';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body></html>

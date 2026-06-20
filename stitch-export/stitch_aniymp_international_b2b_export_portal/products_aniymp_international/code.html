@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ANIYMP INTERNATIONAL | Spice Curator</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&amp;family=Noto+Serif:wght@400;500;600;700&amp;family=Noto+Sans+SC:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed-variant": "#5a4400",
+                    "tertiary-container": "#4c3900",
+                    "primary-fixed": "#c1ecd4",
+                    "inverse-on-surface": "#f2f1ed",
+                    "on-tertiary-container": "#c4a24c",
+                    "surface-container-highest": "#e3e2df",
+                    "on-primary-container": "#86af99",
+                    "primary-fixed-dim": "#a5d0b9",
+                    "secondary": "#7f5533",
+                    "surface-container-low": "#f4f4f0",
+                    "surface-container-lowest": "#ffffff",
+                    "on-error": "#ffffff",
+                    "tertiary": "#322400",
+                    "on-primary": "#ffffff",
+                    "inverse-primary": "#a5d0b9",
+                    "surface-tint": "#3f6653",
+                    "on-secondary-fixed-variant": "#643e1e",
+                    "surface-cream": "#FDFCF8",
+                    "on-background": "#1b1c1a",
+                    "secondary-container": "#ffc69b",
+                    "error": "#ba1a1a",
+                    "on-primary-fixed-variant": "#274e3d",
+                    "surface-bright": "#faf9f5",
+                    "tertiary-fixed": "#ffdf96",
+                    "on-secondary-fixed": "#2f1500",
+                    "background": "#faf9f5",
+                    "outline": "#717973",
+                    "border-subtle": "#E5E1D8",
+                    "surface-container": "#efeeea",
+                    "text-main": "#333333",
+                    "on-secondary-container": "#7a502e",
+                    "secondary-fixed": "#ffdcc3",
+                    "surface-variant": "#e3e2df",
+                    "secondary-fixed-dim": "#f3bb91",
+                    "surface": "#faf9f5",
+                    "on-surface-variant": "#414844",
+                    "primary-container": "#1b4332",
+                    "on-primary-fixed": "#002114",
+                    "primary": "#012d1d",
+                    "on-tertiary-fixed": "#251a00",
+                    "tertiary-fixed-dim": "#e7c268",
+                    "on-surface": "#1b1c1a",
+                    "error-container": "#ffdad6",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "surface-container-high": "#e9e8e4",
+                    "surface-dim": "#dbdad6",
+                    "on-error-container": "#93000a",
+                    "inverse-surface": "#2f312e",
+                    "outline-variant": "#c1c8c2"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "margin-mobile": "20px",
+                    "stack-md": "24px",
+                    "margin-desktop": "64px",
+                    "container-max": "1280px",
+                    "stack-sm": "12px",
+                    "unit": "8px",
+                    "stack-lg": "48px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Noto Serif"],
+                    "headline-md": ["Noto Serif"],
+                    "body-lg": ["IBM Plex Sans"],
+                    "headline-lg-mobile": ["Noto Serif"],
+                    "chinese-body": ["Noto Sans SC"],
+                    "label-caps": ["IBM Plex Sans"],
+                    "headline-xl": ["Noto Serif"],
+                    "body-sm": ["IBM Plex Sans"],
+                    "body-md": ["IBM Plex Sans"]
+            },
+            "fontSize": {
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "500"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "chinese-body": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .product-card:hover .hover-saffron {
+            border-bottom-color: #c4a24c;
+        }
+        body {
+            background-color: #faf9f5;
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-surface">
+<!-- TopNavBar -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-surface border-b border-subtle dark:border-outline-variant h-20">
+<div class="max-w-container-max mx-auto px-margin-desktop flex justify-between items-center h-full">
+<div class="flex items-center gap-stack-md">
+<span class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim">ANIYMP INTERNATIONAL</span>
+</div>
+<nav class="hidden md:flex items-center gap-8 h-full">
+<a class="font-body-md text-body-md h-full flex items-center px-2 text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Home</a>
+<a class="font-body-md text-body-md h-full flex items-center px-2 text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">About Us</a>
+<a class="font-body-md text-body-md h-full flex items-center px-2 text-primary border-b-2 border-primary font-semibold" href="#">Products</a>
+<a class="font-body-md text-body-md h-full flex items-center px-2 text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Quality</a>
+<a class="font-body-md text-body-md h-full flex items-center px-2 text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Certifications</a>
+<a class="font-body-md text-body-md h-full flex items-center px-2 text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Contact</a>
+</nav>
+<div class="flex items-center gap-4">
+<span class="text-on-surface-variant text-body-sm font-medium">EN / 中文</span>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-lg font-medium hover:opacity-90 transition-all active:scale-95">Request a Quote</button>
+</div>
+</div>
+</header>
+<main class="pt-32 pb-stack-lg">
+<!-- Hero Title Section -->
+<section class="max-w-container-max mx-auto px-margin-desktop mb-stack-lg">
+<div class="border-l-4 border-tertiary-container pl-6">
+<p class="font-label-caps text-label-caps text-on-tertiary-container uppercase tracking-widest mb-2">B2B Product Portfolio</p>
+<h1 class="font-headline-xl text-headline-xl text-primary leading-tight">Global Spice Curation</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mt-4">
+                    Providing high-purity, traceable Indian spices to global manufacturers and luxury distributors. Our curation process ensures the highest standards of analytical purity and flavor profile consistency.
+                </p>
+</div>
+</section>
+<!-- Product Grid -->
+<section class="max-w-container-max mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Card 1: Turmeric -->
+<article class="product-card group flex flex-col bg-surface-container-lowest border border-subtle hover:shadow-md transition-all duration-300 hover-saffron border-b-2 border-b-transparent">
+<div class="aspect-[4/3] overflow-hidden bg-surface-container">
+<img alt="Turmeric" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A macro photograph of premium Indian turmeric powder and dried roots on a clean, light-colored ceramic surface. The lighting is soft and professional, highlighting the intense, vibrant golden-yellow hue of the spice. The composition is minimalist and structured, reflecting a high-end corporate B2B aesthetic with a scholarly and reliable tone." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOLqxSQfVycWplBhe3CITXirS6bizpGveb3JfeAP9JtA6MfrSsa3U1wT8JZQafPsFPOhP4UMNQPwIti_YS9NZB1a4FIwEw_YRuOPFYfyrzHaal0mViSTh_DPzyIUx8ofRDaRh578LbFq-gpLSaoKzXWnK5zWEQivY-imFVJtdh2y2MMZUxqcncLwXv-6Uorpb5vK1sNZrbM7Re_-bFGznUiwp7JTjgL6khb0adMQdOKCTaCg3H2BLuQpJDtH8-zN7dugVpO8ILCRU"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h2 class="font-headline-md text-headline-md text-primary">Turmeric</h2>
+<p class="font-chinese-body text-chinese-body text-on-tertiary-container">姜黄 (Jiānghuáng)</p>
+</div>
+<span class="bg-surface-container-high text-primary px-3 py-1 text-label-caps rounded-sm">Whole / Powder</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6 line-clamp-2">Turmeric fingers and powder options for culinary, seasoning, and spice-processing requirements.</p>
+<div class="space-y-3 mb-8">
+<div class="flex justify-between border-b border-subtle pb-1">
+<span class="font-label-caps text-label-caps text-outline uppercase">Origin</span>
+<span class="font-body-sm text-body-sm font-medium">Nizamabad, India</span>
+</div>
+<div class="flex justify-between border-b border-subtle pb-1">
+<span class="font-label-caps text-label-caps text-outline uppercase">Form</span>
+<span class="font-body-sm text-body-sm font-medium">Whole / Ground</span>
+</div>
+<div class="flex justify-between border-b border-subtle pb-1">
+<span class="font-label-caps text-label-caps text-outline uppercase">Harvest</span>
+<span class="font-body-sm text-body-sm font-medium">Jan - March</span>
+</div>
+<div class="flex justify-between">
+<span class="font-label-caps text-label-caps text-outline uppercase">Packing</span>
+<span class="font-body-sm text-body-sm font-medium">25kg / 50kg HDPE</span>
+</div>
+</div>
+<div class="mt-auto">
+<p class="text-[10px] font-bold text-outline uppercase mb-2 tracking-widest">Applications</p>
+<p class="text-body-sm text-on-surface mb-6">Culinary blends, nutraceuticals, natural coloring.</p>
+<button class="w-full py-3 bg-primary text-on-primary font-label-caps uppercase tracking-widest hover:bg-primary-container transition-colors active:scale-95">Request Quote</button>
+</div>
+</div>
+</article>
+<!-- Card 2: Coriander -->
+<article class="product-card group flex flex-col bg-surface-container-lowest border border-subtle hover:shadow-md transition-all duration-300 hover-saffron border-b-2 border-b-transparent">
+<div class="aspect-[4/3] overflow-hidden bg-surface-container">
+<img alt="Coriander" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="An elegant arrangement of dried coriander seeds in a laboratory-style glass bowl against a neutral cream background. The lighting is bright and industrial, emphasizing the texture and uniform quality of the seeds. The visual style is minimal and scholarly, conveying a sense of curated excellence and professional B2B trade standards." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQ33B6cD7LvDMaTmrGtIIA_e-O405YKY_fFJIrCw-NdhbjCLzbVtMHX-fBxPCLwvfOMJLR6ho8PcRUAlOctQIUJxVNqh6BODPr9k_p_SqsBgzVrPmqNKpNCuMNJUfe1KJf4FOdZ_4CZOy7Sku6btNPzbSbViF3xk9uLc2w9X8LKfbT0JpEGr_DNnz2mOX3R85RhA-jVKrgUglUwu6JS2UfNIKTzMbqdy0i0MyHJimmVIXz1M3C46ZsPyiC8jX1x9pgchztdDyH8Dc"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h2 class="font-headline-md text-headline-md text-primary">Coriander</h2>
+<p class="font-chinese-body text-chinese-body text-on-tertiary-container">香菜籽 (Xiāngcài zǐ)</p>
+</div>
+<span class="bg-surface-container-high text-primary px-3 py-1 text-label-caps rounded-sm">Eagle Grade</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6 line-clamp-2">Aromatic coriander seeds with high volatile oil content, sourced from the fertile plains of Rajasthan.</p>
+<div class="space-y-3 mb-8">
+<div class="flex justify-between border-b border-subtle pb-1">
+<span class="font-label-caps text-label-caps text-outline uppercase">Origin</span>
+<span class="font-body-sm text-body-sm font-medium">Rajasthan, India</span>
+</div>
+<div class="flex justify-between border-b border-subtle pb-1">
+<span class="font-label-caps text-label-caps text-outline uppercase">Form</span>
+<span class="font-body-sm text-body-sm font-medium">Seeds / Powder</span>
+</div>
+<div class="flex justify-between border-b border-subtle pb-1">
+<span class="font-label-caps text-label-caps text-outline uppercase">Harvest</span>
+<span class="font-body-sm text-body-sm font-medium">Feb - April</span>
+</div>
+<div class="flex justify-between">
+<span class="font-label-caps text-label-caps text-outline uppercase">Packing</span>
+<span class="font-body-sm text-body-sm font-medium">25kg Jute / PP</span>
+</div>
+</div>
+<div class="mt-auto">
+<p class="text-[10px] font-bold text-outline uppercase mb-2 tracking-widest">Applications</p>
+<p class="text-body-sm text-on-surface mb-6">Curry powders, spice rubs, distillation.</p>
+<button class="w-full py-3 bg-primary text-on-primary font-label-caps uppercase tracking-widest hover:bg-primary-container transition-colors active:scale-95">Request Quote</button>
+</div>
+</div>
+</article>
+<!-- Card 3: Cumin -->
+<article class="product-card group flex flex-col bg-surface-container-lowest border border-subtle hover:shadow-md transition-all duration-300 hover-saffron border-b-2 border-b-transparent">
+<div class="aspect-[4/3] overflow-hidden bg-surface-container">
+<img alt="Cumin" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A clean, clinical top-down view of premium cumin seeds spread across a matte white surface. The seeds are uniform in color and size, presented as an archival record of quality. The lighting is clear and shadow-free, reinforcing the brand's identity as a Digital Curator. Accents of dark green from the border-subtle palette provide a professional contrast." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcfJtPUmRXrrYlk7z1hgAiL8L2ThglR27aLplbzcDDogO4kOVJIguy1HFU6em1FTfaheA9GX13Pn-5CMm0ro9W66kZ_PyIEk9Vr8KdwJQoX657B3LHQGy7qFk3WJCSPnri2_V9EtKSg0GbRfton6H7r62qz9ju9Puk1aZpfuUgJ3O9SfW_KsRvpCCN0pf7-LiU2ifb96bsMIa0S4G5poe90EFSa4hICfE-lE-IQUkzSHXBG4c_IsVtRZTF7zAIPH616IctI09Z_gs"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h2 class="font-headline-md text-headline-md text-primary">Cumin</h2>
+<p class="font-chinese-body text-chinese-body text-on-tertiary-container">孜然 (Zīrán)</p>
+</div>
+<span class="bg-surface-container-high text-primary px-3 py-1 text-label-caps rounded-sm">99% Purity</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6 line-clamp-2">Machine-cleaned cumin seeds characterized by intense aroma and high essential oil levels.</p>
+<div class="space-y-3 mb-8">
+<div class="flex justify-between border-b border-subtle pb-1">
+<span class="font-label-caps text-label-caps text-outline uppercase">Origin</span>
+<span class="font-body-sm text-body-sm font-medium">Gujarat, India</span>
+</div>
+<div class="flex justify-between border-b border-subtle pb-1">
+<span class="font-label-caps text-label-caps text-outline uppercase">Form</span>
+<span class="font-body-sm text-body-sm font-medium">Whole / Ground</span>
+</div>
+<div class="flex justify-between border-b border-subtle pb-1">
+<span class="font-label-caps text-label-caps text-outline uppercase">Harvest</span>
+<span class="font-body-sm text-body-sm font-medium">Feb - March</span>
+</div>
+<div class="flex justify-between">
+<span class="font-label-caps text-label-caps text-outline uppercase">Packing</span>
+<span class="font-body-sm text-body-sm font-medium">25kg / 50kg Bags</span>
+</div>
+</div>
+<div class="mt-auto">
+<p class="text-[10px] font-bold text-outline uppercase mb-2 tracking-widest">Applications</p>
+<p class="text-body-sm text-on-surface mb-6">Bakery products, savory seasonings, oils.</p>
+<button class="w-full py-3 bg-primary text-on-primary font-label-caps uppercase tracking-widest hover:bg-primary-container transition-colors active:scale-95">Request Quote</button>
+</div>
+</div>
+</article>
+<!-- Card 4: Fennel -->
+<article class="product-card group flex flex-col bg-surface-container-lowest border border-subtle hover:shadow-md transition-all duration-300 hover-saffron border-b-2 border-b-transparent">
+<div class="aspect-[4/3] overflow-hidden bg-surface-container">
+<img alt="Fennel" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A sophisticated close-up of light green fennel seeds, displaying their delicate ridges and fresh color. The photograph uses a shallow depth of field to create an intellectual and archival feeling. The background is a muted cream surface, ensuring the product remains the focal point in this high-end industrial design aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCONiaANTjCbeNkZI92CDd0zyKH8de_z5fyHGKTz-hiCpZUDgM-yUEGb6lAifRnzV5KkjVIJKEyPmS2DtPWuOXaeCF0g1loPVl-NfcdEGrPu23FA87Ja12yeOi9oYV_pmlki7AY1aaSehfrLYvbXyvdkyUB8olS57uDLNIs1Qah7YX4NtAQPE7eHOSMj9IY1xbfcPjAXGRXUeEccJG7TFxwi8lWOYOBqGjVDYHvTxJQtlo6owfatsnCUbYCmyqzq-H9GszxxQDYXLQ"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h2 class="font-headline-md text-headline-md text-primary">Fennel</h2>
+<p class="font-chinese-body text-chinese-body text-on-tertiary-container">小茴香 (Xiǎohuíxiāng)</p>
+</div>
+<span class="bg-surface-container-high text-primary px-3 py-1 text-label-caps rounded-sm">Sortex Cleaned</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6 line-clamp-2">Sweet and aromatic fennel seeds, carefully sortex-cleaned for export-quality purity.</p>
+<div class="space-y-3 mb-8">
+<div class="flex justify-between border-b border-subtle pb-1">
+<span class="font-label-caps text-label-caps text-outline uppercase">Origin</span>
+<span class="font-body-sm text-body-sm font-medium">Gujarat, India</span>
+</div>
+<div class="flex justify-between border-b border-subtle pb-1">
+<span class="font-label-caps text-label-caps text-outline uppercase">Form</span>
+<span class="font-body-sm text-body-sm font-medium">Whole Seeds</span>
+</div>
+<div class="flex justify-between border-b border-subtle pb-1">
+<span class="font-label-caps text-label-caps text-outline uppercase">Harvest</span>
+<span class="font-body-sm text-body-sm font-medium">March - April</span>
+</div>
+<div class="flex justify-between">
+<span class="font-label-caps text-label-caps text-outline uppercase">Packing</span>
+<span class="font-body-sm text-body-sm font-medium">25kg PP Laminated</span>
+</div>
+</div>
+<div class="mt-auto">
+<p class="text-[10px] font-bold text-outline uppercase mb-2 tracking-widest">Applications</p>
+<p class="text-body-sm text-on-surface mb-6">Confectionery, herbal teas, pickling.</p>
+<button class="w-full py-3 bg-primary text-on-primary font-label-caps uppercase tracking-widest hover:bg-primary-container transition-colors active:scale-95">Request Quote</button>
+</div>
+</div>
+</article>
+<!-- Card 5: Red Chilli -->
+<article class="product-card group flex flex-col bg-surface-container-lowest border border-subtle hover:shadow-md transition-all duration-300 hover-saffron border-b-2 border-b-transparent">
+<div class="aspect-[4/3] overflow-hidden bg-surface-container">
+<img alt="Red Chilli" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A striking image of deep red dried chillies for professional B2B spice sourcing." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVlKctR4WRXFjGpuNcSiUaJSYOaSNbbLYiba1-pDLosxrq4wTxSPPmZ0feC2pHrLggoSIQk5-MprpZeHO06ucyAjOi3TNAWgmhXDByiCaKBXZ2mK_B05a6WnQLB5nloxAx_fZGdh3W-aWJ734grbF8RMIaEvdK3C3kF8b8eDoxot9xp0sqmsre_ulOJv25r8G7Sp8jUqnmAgGMpdompangvQSP3QuRWpOSX_FDeG_QX9whiOaT8i7V5VOYvc2yrypSHuyZgh03oww"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h2 class="font-headline-md text-headline-md text-primary">Red Chilli</h2>
+<p class="font-chinese-body text-chinese-body text-on-tertiary-container">泰嘉辣椒 (Tàijiā làjiāo)</p>
+</div>
+<span class="bg-surface-container-high text-primary px-3 py-1 text-label-caps rounded-sm">High Heat</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6 line-clamp-2">World-renowned for its intense pungency and bright red color, ideal for oil extraction.</p>
+<div class="space-y-3 mb-8">
+<div class="flex justify-between border-b border-subtle pb-1">
+<span class="font-label-caps text-label-caps text-outline uppercase">Origin</span>
+<span class="font-body-sm text-body-sm font-medium">Guntur, India</span>
+</div>
+<div class="flex justify-between border-b border-subtle pb-1">
+<span class="font-label-caps text-label-caps text-outline uppercase">Form</span>
+<span class="font-body-sm text-body-sm font-medium">Whole With/Without Stem</span>
+</div>
+<div class="flex justify-between border-b border-subtle pb-1">
+<span class="font-label-caps text-label-caps text-outline uppercase">Harvest</span>
+<span class="font-body-sm text-body-sm font-medium">Feb - April</span>
+</div>
+<div class="flex justify-between">
+<span class="font-label-caps text-label-caps text-outline uppercase">Packing</span>
+<span class="font-body-sm text-body-sm font-medium">10kg / 25kg Gunny</span>
+</div>
+</div>
+<div class="mt-auto">
+<p class="text-[10px] font-bold text-outline uppercase mb-2 tracking-widest">Applications</p>
+<p class="text-body-sm text-on-surface mb-6">Hot sauces, spice extracts, industrial food.</p>
+<button class="w-full py-3 bg-primary text-on-primary font-label-caps uppercase tracking-widest hover:bg-primary-container transition-colors active:scale-95">Request Quote</button>
+</div>
+</div>
+</article>
+<!-- Card 6: Fenugreek -->
+<article class="product-card group flex flex-col bg-surface-container-lowest border border-subtle hover:shadow-md transition-all duration-300 hover-saffron border-b-2 border-b-transparent">
+<div class="aspect-[4/3] overflow-hidden bg-surface-container">
+<img alt="Fenugreek" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A technical, detailed shot of yellowish-brown fenugreek seeds in a white ceramic dish. The lighting is high-key and even, emphasizing the uniformity and cleanliness of the B2B batch. The composition is clean and minimalist, reflecting a scholarly archival approach to spice curation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBoIjlHDXuATTg20QM5dP080ezLwfybUBOcMdwdx1_558poGTMyiBQVadQcPPJdW3BSODZrKKAoROiwjQ_eweM8r2IxLhDNMjNyEx0du4XLu_tD0GbVPRfLjCKCb0iG1xJ6405HINRQCsqnanmckftFP6CwJzxZ6hURn-_pixF5I6oaa1IDXZR7PZyWTZkYtIG9jDMgJSlqs-_knJb_Ck1gLuWSqK0MkZpdoYYZv964mKE2V-_BBkgot-R2ITCRGOdG9H8_8laMiQ"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h2 class="font-headline-md text-headline-md text-primary">Fenugreek</h2>
+<p class="font-chinese-body text-chinese-body text-on-tertiary-container">葫芦巴 (Húlúbā)</p>
+</div>
+<span class="bg-surface-container-high text-primary px-3 py-1 text-label-caps rounded-sm">Machine Cleaned</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6 line-clamp-2">Nutrient-dense seeds with a distinct maple-like aroma, sourced from sustainable Indian farms.</p>
+<div class="space-y-3 mb-8">
+<div class="flex justify-between border-b border-subtle pb-1">
+<span class="font-label-caps text-label-caps text-outline uppercase">Origin</span>
+<span class="font-body-sm text-body-sm font-medium">Madhya Pradesh, India</span>
+</div>
+<div class="flex justify-between border-b border-subtle pb-1">
+<span class="font-label-caps text-label-caps text-outline uppercase">Form</span>
+<span class="font-body-sm text-body-sm font-medium">Whole Seeds</span>
+</div>
+<div class="flex justify-between border-b border-subtle pb-1">
+<span class="font-label-caps text-label-caps text-outline uppercase">Harvest</span>
+<span class="font-body-sm text-body-sm font-medium">March - May</span>
+</div>
+<div class="flex justify-between">
+<span class="font-label-caps text-label-caps text-outline uppercase">Packing</span>
+<span class="font-body-sm text-body-sm font-medium">25kg PP Bags</span>
+</div>
+</div>
+<div class="mt-auto">
+<p class="text-[10px] font-bold text-outline uppercase mb-2 tracking-widest">Applications</p>
+<p class="text-body-sm text-on-surface mb-6">Spice blends, health supplements, syrups.</p>
+<button class="w-full py-3 bg-primary text-on-primary font-label-caps uppercase tracking-widest hover:bg-primary-container transition-colors active:scale-95">Request Quote</button>
+</div>
+</div>
+</article>
+<!-- Card 7: Green Cardamom -->
+<article class="product-card group flex flex-col bg-surface-container-lowest border border-subtle hover:shadow-md transition-all duration-300 hover-saffron border-b-2 border-b-transparent">
+<div class="aspect-[4/3] overflow-hidden bg-surface-container">
+<img alt="Green Cardamom" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A premium, artistic macro photograph of vibrant green cardamom pods resting on a dark, textured wood surface. The lighting is dramatic but professional, highlighting the fresh, verdant color and intricate shell texture. This image represents the pinnacle of luxury spice trade, presented with a scholarly focus on quality and heritage." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUgw826kLJHuPRPcRdFm82Xkx-JSsQhqsEqZtRjT2y-IJoVhdQsHvskv1IqDxNbwqYx9SrPe5_-fwZ3h619l79S0W3L4rg0Da9GyQ1jSh-WT-rwCe4IritJSrvryi31nGxceyOEcFGHkvgZ1LH4PVylhOhVjN7BVfntUuNxk1FQNkl0w9zwQeK9qn3nG41CjhhnoXxJhluUkE3sN9kzdtfrkgw6TsWNdBQDgQwcZf_m71pJ_TyqcZzhng7LNzmcKa-9vP44ZNgFKo"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h2 class="font-headline-md text-headline-md text-primary">Green Cardamom</h2>
+<p class="font-chinese-body text-chinese-body text-on-tertiary-container">绿小豆蔻 (Lǜ xiǎo dòukòu)</p>
+</div>
+<span class="bg-surface-container-high text-primary px-3 py-1 text-label-caps rounded-sm">Whole Pods</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6 line-clamp-2">Queen of spices, known for its bold size and intense eucalyptus-like aroma.</p>
+<div class="space-y-3 mb-8">
+<div class="flex justify-between border-b border-subtle pb-1">
+<span class="font-label-caps text-label-caps text-outline uppercase">Origin</span>
+<span class="font-body-sm text-body-sm font-medium">Kerala (Idukki), India</span>
+</div>
+<div class="flex justify-between border-b border-subtle pb-1">
+<span class="font-label-caps text-label-caps text-outline uppercase">Form</span>
+<span class="font-body-sm text-body-sm font-medium">Whole Pods</span>
+</div>
+<div class="flex justify-between border-b border-subtle pb-1">
+<span class="font-label-caps text-label-caps text-outline uppercase">Harvest</span>
+<span class="font-body-sm text-body-sm font-medium">August - Dec</span>
+</div>
+<div class="flex justify-between">
+<span class="font-label-caps text-label-caps text-outline uppercase">Packing</span>
+<span class="font-body-sm text-body-sm font-medium">5kg Vacuum / 25kg Master</span>
+</div>
+</div>
+<div class="mt-auto">
+<p class="text-[10px] font-bold text-outline uppercase mb-2 tracking-widest">Applications</p>
+<p class="text-body-sm text-on-surface mb-6">Bakery, premium teas, fine dining.</p>
+<button class="w-full py-3 bg-primary text-on-primary font-label-caps uppercase tracking-widest hover:bg-primary-container transition-colors active:scale-95">Request Quote</button>
+</div>
+</div>
+</article>
+<!-- Placeholder for Asymmetry / Info Card -->
+<article class="flex flex-col bg-primary-container text-on-primary-container p-8 justify-center">
+<span class="material-symbols-outlined text-4xl mb-6" style="font-variation-settings: 'FILL' 1;">verified</span>
+<h3 class="font-headline-md text-headline-md mb-4 text-on-primary-container">Quality Assurance</h3>
+<p class="font-body-md text-body-md opacity-80 mb-8">
+                        Every batch undergoes rigorous lab testing for moisture, oil content, and microbiological purity. Full traceability reports available for all B2B shipments.
+                    </p>
+<a class="inline-flex items-center gap-2 font-label-caps uppercase tracking-widest hover:underline" href="#">
+                        Download Quality Standards
+                        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</article>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary text-on-primary border-t border-primary-container">
+<div class="max-w-container-max mx-auto px-margin-desktop py-stack-lg flex flex-col md:flex-row justify-between items-start gap-8">
+<div class="max-w-md">
+<span class="font-headline-md text-headline-md text-on-primary-container block mb-4">ANIYMP INTERNATIONAL</span>
+<p class="font-body-sm text-body-sm text-on-primary-fixed-variant mb-6">
+                    Global curators of premium Indian spices. Dedicated to the standards of excellence required by international food industries.
+                </p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined">public</span>
+<span class="material-symbols-outlined">mail</span>
+<span class="material-symbols-outlined">phone</span>
+</div>
+</div>
+<div class="flex flex-col md:flex-row gap-gutter">
+<div class="space-y-4">
+<p class="font-label-caps text-label-caps opacity-50 uppercase">Legal</p>
+<ul class="space-y-2">
+<li><a class="font-body-sm text-body-sm text-on-primary-fixed-variant hover:text-on-primary hover:underline transition-all" href="#">Privacy Policy</a></li>
+<li><a class="font-body-sm text-body-sm text-on-primary-fixed-variant hover:text-on-primary hover:underline transition-all" href="#">Terms of Service</a></li>
+<li><a class="font-body-sm text-body-sm text-on-primary-fixed-variant hover:text-on-primary hover:underline transition-all" href="#">Compliance</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<p class="font-label-caps text-label-caps opacity-50 uppercase">Trade</p>
+<ul class="space-y-2">
+<li><a class="font-body-sm text-body-sm text-on-primary-fixed-variant hover:text-on-primary hover:underline transition-all" href="#">Sitemap</a></li>
+<li><a class="font-body-sm text-body-sm text-on-primary-fixed-variant hover:text-on-primary hover:underline transition-all" href="#">Global Trade Policy</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop py-6 border-t border-on-primary/10">
+<p class="font-body-sm text-body-sm text-on-primary/60 text-center md:text-left">
+                © 2024 ANIYMP INTERNATIONAL. CIN: U74999TN2020PTC139080. All Rights Reserved.
+            </p>
+</div>
+</footer>
+<!-- FAB for quick inquiry (Responsive) -->
+<button class="fixed bottom-8 right-8 bg-tertiary text-on-tertiary p-4 rounded-full shadow-lg hover:scale-110 active:scale-95 transition-all md:hidden z-40">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">chat</span>
+</button>
+</body></html>

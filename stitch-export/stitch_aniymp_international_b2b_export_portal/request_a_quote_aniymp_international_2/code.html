@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100..900&family=Noto+Serif:wght@100..900&display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .form-input-focus:focus {
+            outline: none;
+            border-color: #012d1d;
+            box-shadow: 0 0 0 1px #012d1d;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #efeeea;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #012d1d;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-container": "#86af99",
+                        "secondary-fixed-dim": "#f3bb91",
+                        "on-tertiary-fixed": "#251a00",
+                        "on-secondary-fixed": "#2f1500",
+                        "surface-container": "#efeeea",
+                        "on-secondary-container": "#7a502e",
+                        "primary-container": "#1b4332",
+                        "outline": "#717973",
+                        "surface-variant": "#e3e2df",
+                        "surface-cream": "#FDFCF8",
+                        "inverse-primary": "#a5d0b9",
+                        "on-background": "#1b1c1a",
+                        "inverse-on-surface": "#f2f1ed",
+                        "primary": "#012d1d",
+                        "tertiary-fixed-dim": "#e7c268",
+                        "surface-bright": "#faf9f5",
+                        "outline-variant": "#c1c8c2",
+                        "tertiary-container": "#4c3900",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#5a4400",
+                        "on-primary-fixed": "#002114",
+                        "tertiary-fixed": "#ffdf96",
+                        "surface-dim": "#dbdad6",
+                        "on-surface-variant": "#414844",
+                        "border-subtle": "#E5E1D8",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed-variant": "#643e1e",
+                        "primary-fixed-dim": "#a5d0b9",
+                        "tertiary": "#322400",
+                        "error": "#ba1a1a",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-container": "#c4a24c",
+                        "surface-container-low": "#f4f4f0",
+                        "surface-container-highest": "#e3e2df",
+                        "secondary": "#7f5533",
+                        "on-error-container": "#93000a",
+                        "surface": "#faf9f5",
+                        "error-container": "#ffdad6",
+                        "background": "#faf9f5",
+                        "text-main": "#333333",
+                        "on-surface": "#1b1c1a",
+                        "on-error": "#ffffff",
+                        "secondary-fixed": "#ffdcc3",
+                        "inverse-surface": "#2f312e",
+                        "primary-fixed": "#c1ecd4",
+                        "surface-container-high": "#e9e8e4",
+                        "secondary-container": "#ffc69b",
+                        "on-primary-fixed-variant": "#274e3d",
+                        "on-secondary": "#ffffff",
+                        "surface-tint": "#3f6653"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "margin-mobile": "20px",
+                        "gutter": "24px",
+                        "unit": "8px",
+                        "stack-md": "24px",
+                        "stack-lg": "48px",
+                        "margin-desktop": "64px",
+                        "stack-sm": "12px"
+                    },
+                    "fontFamily": {
+                        "headline-xl": ["Noto Serif"],
+                        "headline-md": ["Noto Serif"],
+                        "chinese-body": ["Noto Sans SC"],
+                        "body-sm": ["IBM Plex Sans"],
+                        "headline-lg-mobile": ["Noto Serif"],
+                        "body-lg": ["IBM Plex Sans"],
+                        "label-caps": ["IBM Plex Sans"],
+                        "headline-lg": ["Noto Serif"],
+                        "body-md": ["IBM Plex Sans"]
+                    },
+                    "fontSize": {
+                        "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "500"}],
+                        "chinese-body": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<header class="bg-surface sticky top-0 z-50 border-b border-subtle">
+<div class="max-w-container-max mx-auto px-margin-desktop flex justify-between items-center h-20">
+<div class="flex items-center gap-4">
+<span class="font-headline-md text-headline-md font-bold text-primary">ANIYMP INTERNATIONAL</span>
+</div>
+<nav class="hidden md:flex gap-8">
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md" href="#">Home</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md" href="#">About Us</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md" href="#">Products</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md" href="#">Quality</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md" href="#">Certifications</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md" href="#">Contact</a>
+</nav>
+<div class="flex items-center gap-6">
+<span class="font-body-md text-on-surface">EN / 中文</span>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-lg font-body-md hover:opacity-90 transition-all scale-95 active:opacity-80">
+                    Request a Quote
+                </button>
+</div>
+</div>
+</header>
+<main class="max-w-container-max mx-auto px-margin-desktop py-stack-lg min-h-screen">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Hero Text Section -->
+<div class="lg:col-span-4 space-y-stack-md">
+<div class="inline-block px-3 py-1 bg-primary-container text-on-primary-container font-label-caps uppercase rounded">Enquiry 询价单</div>
+<h1 class="font-headline-xl text-headline-xl text-primary">Request a Quotation</h1>
+<h2 class="font-chinese-body text-headline-md text-secondary">索取报价</h2>
+<p class="font-body-lg text-on-surface-variant max-w-md">
+                    Connect with our global trade experts to receive a customized quote for premium Indian spices tailored to your specific industrial requirements.
+                </p>
+<div class="pt-stack-md border-t border-border-subtle">
+<p class="font-body-sm text-on-surface-variant italic">
+                        "Our team will review your enquiry and contact you with product availability, packaging options, and quotation details."
+                    </p>
+<p class="font-chinese-body text-body-sm mt-2 text-on-surface-variant">
+                        我们的团队将审核您的咨询，并与您联系，提供产品供应情况、包装选项和报价详情。
+                    </p>
+</div>
+<!-- Trust Indicators -->
+<div class="grid grid-cols-2 gap-4 mt-stack-lg">
+<div class="p-4 bg-surface-container rounded-xl border border-border-subtle">
+<span class="material-symbols-outlined text-primary mb-2">verified</span>
+<p class="font-label-caps text-primary">SGS Certified</p>
+</div>
+<div class="p-4 bg-surface-container rounded-xl border border-border-subtle">
+<span class="material-symbols-outlined text-primary mb-2">public</span>
+<p class="font-label-caps text-primary">Global Logistics</p>
+</div>
+</div>
+<div class="mt-8 rounded-xl overflow-hidden relative aspect-square border border-border-subtle shadow-sm">
+<img alt="Spices" class="object-cover w-full h-full" data-alt="A macro photograph of premium Indian black peppercorns and aromatic cinnamon sticks arranged on a dark, artisanal wooden surface. The lighting is moody and dramatic, emphasizing the rich textures and deep colors of the spices. The background is a clean, minimalist cream wall that matches the brand's sophisticated aesthetic. High-end, scholarly presentation of raw agricultural excellence." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBT6EfMDFsA3I048zZrp2tby6Cf8pzSb6Fwl4elj7XhYGzEriXaAwBfYiLJYIqGTO4aKQ_BGVhfAxp_JAksQ-ihbBgELQwH-CpFX0Xtu4Y50sJ_QOJGNJWVZcU7ZUwKzJZ_xLO4qt0lHf3xO7bgPwCKuRSVsqu9ZXt0bEKebKuE1K776aLTxY0dKh056M_K7V7yOJR5MVw_KF0eRpsXzd7WkBXejZiHOvN8VcAOyqZvl3X9E81irML4KZ0MqMh0cWqhKKDytpFX_p0"/>
+</div>
+</div>
+<!-- Form Section -->
+<div class="lg:col-span-8">
+<div class="bg-white p-8 md:p-12 rounded-xl shadow-[0_4px_20px_rgba(27,67,50,0.05)] border border-border-subtle">
+<form class="space-y-8" id="quoteForm">
+<!-- Section: Personal & Company Info -->
+<div class="space-y-6">
+<div class="flex items-center gap-4 border-b border-border-subtle pb-2">
+<span class="material-symbols-outlined text-primary">business_center</span>
+<h3 class="font-headline-md text-primary">Company Information 公司信息</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-caps text-on-surface-variant uppercase">Full Name 姓名 *</label>
+<input class="w-full p-3 bg-surface-cream border border-border-subtle rounded-lg form-input-focus font-body-md" placeholder="e.g. John Doe" required="" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-on-surface-variant uppercase">Company Name 公司名称 *</label>
+<input class="w-full p-3 bg-surface-cream border border-border-subtle rounded-lg form-input-focus font-body-md" placeholder="Global Food Corp" required="" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-on-surface-variant uppercase">Country 国家 *</label>
+<select class="w-full p-3 bg-surface-cream border border-border-subtle rounded-lg form-input-focus font-body-md" required="">
+<option disabled="" selected="" value="">Select your country</option>
+<option value="CN">China 中国</option>
+<option value="US">United States 美国</option>
+<option value="GB">United Kingdom 英国</option>
+<option value="AE">UAE 阿联酋</option>
+<option value="DE">Germany 德国</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-on-surface-variant uppercase">Business Email 业务邮箱 *</label>
+<input class="w-full p-3 bg-surface-cream border border-border-subtle rounded-lg form-input-focus font-body-md" placeholder="procurement@company.com" required="" type="email"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="space-y-2">
+<label class="font-label-caps text-on-surface-variant uppercase">Phone Number 电话</label>
+<input class="w-full p-3 bg-surface-cream border border-border-subtle rounded-lg form-input-focus font-body-md" placeholder="+1..." type="tel"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-on-surface-variant uppercase">WhatsApp</label>
+<input class="w-full p-3 bg-surface-cream border border-border-subtle rounded-lg form-input-focus font-body-md" placeholder="WhatsApp ID" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-on-surface-variant uppercase">WeChat 微信</label>
+<input class="w-full p-3 bg-surface-cream border border-border-subtle rounded-lg form-input-focus font-body-md" placeholder="WeChat ID" type="text"/>
+</div>
+</div>
+</div>
+<!-- Section: Product Details -->
+<div class="space-y-6 pt-4">
+<div class="flex items-center gap-4 border-b border-border-subtle pb-2">
+<span class="material-symbols-outlined text-primary">inventory_2</span>
+<h3 class="font-headline-md text-primary">Product Requirements 产品需求</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-caps text-on-surface-variant uppercase">Product Name 产品名称 *</label>
+<input class="w-full p-3 bg-surface-cream border border-border-subtle rounded-lg form-input-focus font-body-md" placeholder="e.g. Turmeric, Black Pepper" required="" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-on-surface-variant uppercase">Product Form 产品形式 *</label>
+<select class="w-full p-3 bg-surface-cream border border-border-subtle rounded-lg form-input-focus font-body-md" required="">
+<option disabled="" selected="" value="">Whole, Powdered, Oleoresin...</option>
+<option value="whole">Whole Spice 原料</option>
+<option value="powder">Powder 粉末</option>
+<option value="crushed">Crushed / Flakes 碎末</option>
+<option value="oil">Oil / Oleoresin 精油</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="space-y-2">
+<label class="font-label-caps text-on-surface-variant uppercase">Quantity 数量 *</label>
+<input class="w-full p-3 bg-surface-cream border border-border-subtle rounded-lg form-input-focus font-body-md" placeholder="0.00" required="" type="number"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-on-surface-variant uppercase">Unit 单位 *</label>
+<select class="w-full p-3 bg-surface-cream border border-border-subtle rounded-lg form-input-focus font-body-md" required="">
+<option value="MT">Metric Tons (MT) 公吨</option>
+<option value="KG">Kilograms (KG) 公斤</option>
+<option value="FCL">20ft Container (FCL)</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-on-surface-variant uppercase">Packaging 包装偏好</label>
+<select class="w-full p-3 bg-surface-cream border border-border-subtle rounded-lg form-input-focus font-body-md">
+<option value="standard">Standard Bulk 散装</option>
+<option value="jute">Jute Bags 麻袋</option>
+<option value="pp">PP Bags 编织袋</option>
+<option value="retail">Private Label / Retail 零售包装</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-caps text-on-surface-variant uppercase">Destination Port 目的港 *</label>
+<input class="w-full p-3 bg-surface-cream border border-border-subtle rounded-lg form-input-focus font-body-md" placeholder="e.g. Shanghai, Hamburg" required="" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-on-surface-variant uppercase">Required Delivery Date 交付日期</label>
+<input class="w-full p-3 bg-surface-cream border border-border-subtle rounded-lg form-input-focus font-body-md" type="date"/>
+</div>
+</div>
+</div>
+<!-- Section: Message & Files -->
+<div class="space-y-6 pt-4">
+<div class="flex items-center gap-4 border-b border-border-subtle pb-2">
+<span class="material-symbols-outlined text-primary">edit_note</span>
+<h3 class="font-headline-md text-primary">Additional Details 补充说明</h3>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-on-surface-variant uppercase">Message 留言</label>
+<textarea class="w-full p-3 bg-surface-cream border border-border-subtle rounded-lg form-input-focus font-body-md" placeholder="Specific quality requirements, certification needs, or special instructions..." rows="4"></textarea>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-on-surface-variant uppercase">Upload Specifications (Optional) 上传规范 (选填)</label>
+<div class="border-2 border-dashed border-border-subtle rounded-xl p-8 text-center bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer group">
+<input class="hidden" id="fileUpload" type="file"/>
+<label class="cursor-pointer flex flex-col items-center" for="fileUpload">
+<span class="material-symbols-outlined text-primary-container text-4xl mb-2 group-hover:scale-110 transition-transform">cloud_upload</span>
+<p class="font-body-md text-on-surface">Click to upload or drag and drop</p>
+<p class="font-body-sm text-on-surface-variant mt-1">PDF, DOCX, or JPG (Max 10MB)</p>
+</label>
+</div>
+</div>
+</div>
+<!-- Section: Submission -->
+<div class="pt-8 border-t border-border-subtle space-y-6">
+<label class="flex items-start gap-3 cursor-pointer group">
+<input class="mt-1 w-5 h-5 rounded border-border-subtle text-primary focus:ring-primary" required="" type="checkbox"/>
+<span class="font-body-sm text-on-surface-variant">
+                                    I consent to ANIYMP INTERNATIONAL processing my business data to provide this quotation and contact me via the provided channels. 我同意 ANIYMP INTERNATIONAL 处理我的业务数据以提供此报价，并通过提供的渠道与我联系。
+                                </span>
+</label>
+<button class="w-full md:w-auto bg-primary text-on-primary px-12 py-4 rounded-lg font-headline-md hover:bg-primary-container hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 active:scale-95" type="submit">
+                                Submit Quote Request 提交报价请求
+                            </button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer Component -->
+<footer class="bg-primary text-on-primary">
+<div class="max-w-container-max mx-auto px-margin-desktop py-stack-lg">
+<div class="flex flex-col md:flex-row justify-between items-start gap-stack-md border-b border-primary-container pb-stack-md">
+<div class="space-y-4">
+<span class="font-headline-md text-headline-md text-on-primary-container">ANIYMP INTERNATIONAL</span>
+<p class="font-body-sm max-w-xs opacity-80">Premium Indian spice curation for the global B2B trade. Quality, traceability, and tradition in every shipment.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-12">
+<div class="flex flex-col gap-3">
+<span class="font-label-caps opacity-60">LINKS</span>
+<a class="font-body-sm text-on-primary-fixed-variant hover:text-on-primary hover:underline transition-all" href="#">Privacy Policy</a>
+<a class="font-body-sm text-on-primary-fixed-variant hover:text-on-primary hover:underline transition-all" href="#">Terms of Service</a>
+</div>
+<div class="flex flex-col gap-3">
+<span class="font-label-caps opacity-60">TRADE</span>
+<a class="font-body-sm text-on-primary-fixed-variant hover:text-on-primary hover:underline transition-all" href="#">Compliance</a>
+<a class="font-body-sm text-on-primary-fixed-variant hover:text-on-primary hover:underline transition-all" href="#">Global Trade Policy</a>
+</div>
+<div class="flex flex-col gap-3">
+<span class="font-label-caps opacity-60">SUPPORT</span>
+<a class="font-body-sm text-on-primary-fixed-variant hover:text-on-primary hover:underline transition-all" href="#">Sitemap</a>
+<a class="font-body-sm text-on-primary-fixed-variant hover:text-on-primary hover:underline transition-all" href="#">Contact Support</a>
+</div>
+</div>
+</div>
+<div class="pt-8 flex flex-col md:flex-row justify-between items-center gap-4 opacity-70">
+<p class="font-body-sm">© 2024 ANIYMP INTERNATIONAL. CIN: U74999TN2020PTC139080. All Rights Reserved.</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined">public</span>
+<span class="material-symbols-outlined">verified_user</span>
+<span class="material-symbols-outlined">description</span>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interaction for form submission
+        document.getElementById('quoteForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = e.target.querySelector('button[type="submit"]');
+            const originalText = btn.innerHTML;
+            
+            btn.innerHTML = '<span class="flex items-center justify-center gap-2"><svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg> Sending Enquiry...</span>';
+            btn.disabled = true;
+
+            setTimeout(() => {
+                btn.innerHTML = '<span class="flex items-center justify-center gap-2"><span class="material-symbols-outlined">check_circle</span> Request Submitted</span>';
+                btn.classList.replace('bg-primary', 'bg-secondary');
+                
+                // Reset after 3 seconds
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    btn.classList.replace('bg-secondary', 'bg-primary');
+                    btn.disabled = false;
+                    e.target.reset();
+                }, 3000);
+            }, 1500);
+        });
+
+        // Simple file upload preview logic
+        const fileInput = document.getElementById('fileUpload');
+        fileInput.addEventListener('change', function() {
+            if (this.files && this.files[0]) {
+                const label = this.parentElement.querySelector('p.text-on-surface');
+                label.innerText = `Selected: ${this.files[0].name}`;
+                label.classList.add('text-primary', 'font-bold');
+            }
+        });
+    </script>
+</body></html>

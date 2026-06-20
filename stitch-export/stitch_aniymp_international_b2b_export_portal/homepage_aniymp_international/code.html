@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ANIYMP INTERNATIONAL | Global Spice Curator</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=Noto+Serif:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100..900&family=Noto+Serif:wght@100..900&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#5a4400",
+                        "tertiary-container": "#4c3900",
+                        "primary-fixed": "#c1ecd4",
+                        "inverse-on-surface": "#f2f1ed",
+                        "on-tertiary-container": "#c4a24c",
+                        "surface-container-highest": "#e3e2df",
+                        "on-primary-container": "#86af99",
+                        "primary-fixed-dim": "#a5d0b9",
+                        "secondary": "#7f5533",
+                        "surface-container-low": "#f4f4f0",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error": "#ffffff",
+                        "tertiary": "#322400",
+                        "on-primary": "#ffffff",
+                        "inverse-primary": "#a5d0b9",
+                        "surface-tint": "#3f6653",
+                        "on-secondary-fixed-variant": "#643e1e",
+                        "surface-cream": "#FDFCF8",
+                        "on-background": "#1b1c1a",
+                        "secondary-container": "#ffc69b",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed-variant": "#274e3d",
+                        "surface-bright": "#faf9f5",
+                        "tertiary-fixed": "#ffdf96",
+                        "on-secondary-fixed": "#2f1500",
+                        "background": "#faf9f5",
+                        "outline": "#717973",
+                        "border-subtle": "#E5E1D8",
+                        "surface-container": "#efeeea",
+                        "text-main": "#333333",
+                        "on-secondary-container": "#7a502e",
+                        "secondary-fixed": "#ffdcc3",
+                        "surface-variant": "#e3e2df",
+                        "secondary-fixed-dim": "#f3bb91",
+                        "surface": "#faf9f5",
+                        "on-surface-variant": "#414844",
+                        "primary-container": "#1b4332",
+                        "on-primary-fixed": "#002114",
+                        "primary": "#012d1d",
+                        "on-tertiary-fixed": "#251a00",
+                        "tertiary-fixed-dim": "#e7c268",
+                        "on-surface": "#1b1c1a",
+                        "error-container": "#ffdad6",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "surface-container-high": "#e9e8e4",
+                        "surface-dim": "#dbdad6",
+                        "on-error-container": "#93000a",
+                        "inverse-surface": "#2f312e",
+                        "outline-variant": "#c1c8c2"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "margin-mobile": "20px",
+                        "stack-md": "24px",
+                        "margin-desktop": "64px",
+                        "container-max": "1280px",
+                        "stack-sm": "12px",
+                        "unit": "8px",
+                        "stack-lg": "48px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Noto Serif"],
+                        "headline-md": ["Noto Serif"],
+                        "body-lg": ["IBM Plex Sans"],
+                        "headline-lg-mobile": ["Noto Serif"],
+                        "chinese-body": ["Noto Sans SC"],
+                        "label-caps": ["IBM Plex Sans"],
+                        "headline-xl": ["Noto Serif"],
+                        "body-sm": ["IBM Plex Sans"],
+                        "body-md": ["IBM Plex Sans"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "500"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "chinese-body": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .spice-marker {
+            cursor: pointer;
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .spice-marker:hover {
+            transform: scale(1.2);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #012d1d;
+        }
+        .timeline-line::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 1px;
+            height: 100%;
+            background-color: #E5E1D8;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-surface border-b border-subtle h-20">
+<div class="max-w-container-max mx-auto px-margin-desktop flex justify-between items-center h-full">
+<div class="font-headline-md text-headline-md font-bold text-primary">
+                ANIYMP INTERNATIONAL
+            </div>
+<nav class="hidden md:flex space-x-unit gap-8">
+<a class="text-primary border-b-2 border-primary font-semibold font-body-md text-body-md" href="#">Home</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md text-body-md" href="#about">About Us</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md text-body-md" href="#products">Products</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md text-body-md" href="#quality">Quality</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md text-body-md" href="#certifications">Certifications</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md text-body-md" href="#contact">Contact</a>
+</nav>
+<div class="flex items-center gap-4">
+<span class="text-on-surface-variant font-body-sm text-body-sm hidden lg:inline">EN / 中文</span>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 font-semibold text-body-sm rounded-lg hover:opacity-90 transition-all scale-95 active:opacity-80">
+                    Request a Quote
+                </button>
+</div>
+</div>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative h-[870px] overflow-hidden flex items-center">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="A high-fidelity, professional macro photograph of vibrant Indian spices including golden turmeric powder, dried red chillies, and green cardamom pods arranged artistically on a rustic surface. The lighting is soft and cinematic, highlighting the rich textures and deep colors of the spices. The composition evokes a sense of premium quality and heritage, suited for a high-end corporate B2B website with a clean, light-mode aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZGfYazC7cdACwpKoC4V6jKx717RRvYQYAECc4W4RAuUHdvuMrHi-CXj0kkJ5nYyVFNh9CgV4goxvLwLPp-y45-8xWLhgoSDZZg-Uw9g26oUWWIDvpFVOv2rZPA9moz13b4SkipVl8FVr9e4Qtmc7n_VQNgtftVV01O3RtYicZM32YLDOCFWv-GidDohPu5uxRfv2z16iWI5U0XWxyPqHgZ8CmD_RXp3GpomdVlAk_2__a4rDqEXw_46gk20_QQVNa8dKhqmK5Wqo"/>
+<div class="absolute inset-0 bg-gradient-to-r from-primary/80 to-transparent"></div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop relative z-10 w-full text-on-primary">
+<div class="max-w-2xl space-y-stack-md">
+<h1 class="font-headline-xl text-headline-xl">
+                        Indian Spices. Reliable Quality. <br/>
+<span class="text-primary-fixed">Global Supply.</span>
+</h1>
+<p class="font-headline-md text-headline-md font-normal opacity-90 leading-snug">
+                        优质印度香料。可靠的品质。全球供应。
+                    </p>
+<div class="flex gap-4 pt-4">
+<button class="bg-on-primary text-primary px-8 py-3 font-semibold rounded-lg hover:bg-surface-cream transition-all">
+                            Request a Quote
+                        </button>
+<button class="border border-on-primary text-on-primary px-8 py-3 font-semibold rounded-lg hover:bg-white/10 transition-all">
+                            View Products
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Intro Section -->
+<section class="py-stack-lg bg-surface-cream" id="about">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-gutter items-center">
+<div class="space-y-stack-md">
+<span class="font-label-caps text-label-caps text-secondary tracking-widest uppercase">The Heritage of Purity</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">Professional Indian Agro-Products Exporter</h2>
+<div class="space-y-4 text-on-surface-variant font-body-lg text-body-lg">
+<p>ANIYMP INTERNATIONAL stands as a curated gateway to India’s agricultural heritage. As a specialized B2B exporter, we facilitate the seamless movement of premium Indian spices to the most discerning markets worldwide, with a specialized focus on East Asian procurement standards.</p>
+<p>Our commitment transcends mere trade; we are architects of supply chain integrity. Every gram of spice we export is a testament to rigorous sourcing protocols, climate-controlled logistics, and an unwavering adherence to international safety certifications.</p>
+</div>
+</div>
+<div class="relative">
+<div class="aspect-square bg-surface-container rounded-lg overflow-hidden border border-subtle">
+<img class="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-500" data-alt="An organized, high-end industrial spice processing facility in India. Workers in clean, professional uniforms are handling high-quality dried red chillies under bright, clean white lighting. The environment is surgical and professional, emphasizing the scholarly and authoritative nature of the global B2B trade company ANIYMP INTERNATIONAL. The palette is dominated by neutral whites and deep greens." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-jGh9CG-JUo-r3KAmaoPvfxZFOmDJib2JxQKH7olyQaN_OCcSL_78jJQE97CiHvb16aKK5ExGzNmD9zg14H3YYzvJZpYT3BW0lc2clnQJCcU7_w_HRL7hPw4XMF71stNmsJ9tAOs4Z-7GT8bQCU-gZEZxCGJDBXBlcK1OqZ4EInlW7Smk1YhX1UroesIbF7cKQVSixgnStcV5RES0i85NqMHXidIvA5w3I9YtswVjR1eWbsvclbf2gx63nAHYf13NFBd_DUnYE98"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Products Bento -->
+<section class="py-stack-lg bg-background" id="products">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="text-center mb-stack-lg">
+<h2 class="font-headline-lg text-headline-lg text-primary">Our Curated Spice Portfolio</h2>
+<p class="text-on-surface-variant mt-2 font-body-md">Exquisite sourcing from India's primary production zones.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-gutter">
+<!-- Turmeric Card -->
+<div class="group border border-subtle bg-surface hover:shadow-lg transition-all duration-300 flex flex-col">
+<div class="aspect-[4/3] overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="Close-up of premium, bright orange-yellow turmeric powder and dried turmeric roots. The texture is sharp and detailed. Soft, natural lighting highlights the purity of the color against a neutral, high-end backdrop. Part of a curated spice gallery for a professional B2B exporter." src="https://lh3.googleusercontent.com/aida-public/AB6AXuChAAk7NUUNXgRSPKF64juK1RZJ6MrqK9Kvc1uG9OB4clEoXcR08OaSr5GHjpPiVG4o9O96C3J-Bm1aXL6jT8EdM-FfJxp4UjEQFcu-oGmiNThfUruj4VWA4xdwOB9LIue3nbkUFsALj5f7B7UqVUu5TcXQeUlCCBGsGoDKNyvjvhDQHfPAHedqp3f-1EVfPLtkGSKAXu-ytvfWXYno43W5MevbgAK6YThRe-E48TXcIMMXPXUro9Odg-M1rfeS_AYtvLM2fSPA_jo"/>
+</div>
+<div class="p-stack-md flex flex-col flex-grow">
+<h3 class="font-headline-md text-headline-md text-primary">Turmeric</h3>
+<span class="text-secondary font-chinese-body text-chinese-body mb-4">姜黄</span>
+<button class="mt-auto border border-primary text-primary px-4 py-2 text-body-sm font-semibold hover:bg-primary hover:text-on-primary transition-all rounded-lg">Request Quote</button>
+</div>
+</div>
+<!-- Coriander -->
+<div class="group border border-subtle bg-surface hover:shadow-lg transition-all duration-300 flex flex-col">
+<div class="aspect-[4/3] overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="Dried coriander seeds in a heap, showcasing a uniform golden-brown color and spherical shape. High-resolution photography focusing on the detailed surface patterns of the seeds. Minimalist and scholarly presentation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2zld2wJ7st6q8yaMOTBkDtMYgoQSkWDCUd1YBk35xYRD07nCdZ0L2IU8uL9-gN12xdyRseBFB41935Zw2PldncmAgJnDAI1OHsWJaLCZ0y3yt1XUF2JZfonzCVFlpK9ZEnFUn-tO1b3L0aTxXiNCTeGGPY4Af23nLxMZvQHzdd6SMJ9ciORQJ5d0k_qDnji3VUIfipFgrDyEPQIzNAGbzY34rYdIZKjPvIZ9axZdBZxzF-Ml99KFZUepBQa0sq5Qq3-McHt3B5Ns"/>
+</div>
+<div class="p-stack-md flex flex-col flex-grow">
+<h3 class="font-headline-md text-headline-md text-primary">Coriander</h3>
+<span class="text-secondary font-chinese-body text-chinese-body mb-4">香菜籽</span>
+<button class="mt-auto border border-primary text-primary px-4 py-2 text-body-sm font-semibold hover:bg-primary hover:text-on-primary transition-all rounded-lg">Request Quote</button>
+</div>
+</div>
+<!-- Cumin -->
+<div class="group border border-subtle bg-surface hover:shadow-lg transition-all duration-300 flex flex-col">
+<div class="aspect-[4/3] overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="Premium cumin seeds with a distinct grey-brown hue. Macro shot capturing the aromatic texture. The image evokes industrial reliability and export-grade quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAx3v8lboYvpf0x7ZP-3rHWSUNDvt1ui8fbgJR4BxyDsHfJL_Ck1dPfwKCkImA4UI7BEC8uXLcSM08PktPuuO8Bt9oD6b-QSaZ5Cg_NmxOdhSNAUdlp52HphV4BRE-QB-iIfJ09nSPVubXZRjaxjq0zLEF9MUfl5VLkbVMsBC7cOzo1IbmmRkg0uIuJMrBQKAqktmlucmtj4iCgLIQaCezKr2CLFrQszR6uxB4ATe8MmEESXfNI00vh-3wf_k_iD2Vyphp_a08qF68"/>
+</div>
+<div class="p-stack-md flex flex-col flex-grow">
+<h3 class="font-headline-md text-headline-md text-primary">Cumin</h3>
+<span class="text-secondary font-chinese-body text-chinese-body mb-4">孜然</span>
+<button class="mt-auto border border-primary text-primary px-4 py-2 text-body-sm font-semibold hover:bg-primary hover:text-on-primary transition-all rounded-lg">Request Quote</button>
+</div>
+</div>
+<!-- Fennel -->
+<div class="group border border-subtle bg-surface hover:shadow-lg transition-all duration-300 flex flex-col">
+<div class="aspect-[4/3] overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="Green fennel seeds displayed with precision. Soft lighting highlights the pale green ridges. A professional, clinical presentation for global procurement officers." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD92dJ3Lhg4Bq4nPF7QQRPqs62K-Fcju27I_vXCZx7s8HhsTfNi3oBU0d_rAW_wni-p3Cf5vrXcveVDkpmf6fT_33fwa-VcsHnJvFRxZxnqotAFjNrBP_EcyPpqZhW1bCWlFhSK-0CwT0grxUEoLwljZEpGOrWhQpLQGvMcLMUpduJh2SokorkizymZ9FV4ED557BJp4orvmXCtZXxbeo624ROkVP6BB1Iz8UlaanWgfsf98ka0mWxyhX7pmYILwQzPVA6kyTvUMZg"/>
+</div>
+<div class="p-stack-md flex flex-col flex-grow">
+<h3 class="font-headline-md text-headline-md text-primary">Fennel</h3>
+<span class="text-secondary font-chinese-body text-chinese-body mb-4">茴香</span>
+<button class="mt-auto border border-primary text-primary px-4 py-2 text-body-sm font-semibold hover:bg-primary hover:text-on-primary transition-all rounded-lg">Request Quote</button>
+</div>
+</div>
+<!-- Red Chilli -->
+<div class="group border border-subtle bg-surface hover:shadow-lg transition-all duration-300 flex flex-col">
+<div class="aspect-[4/3] overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="Deep red dried Kashmiri chillies with a wrinkled texture. The color is rich and vibrant, representing the highest export grade. Clean, focused lighting on a neutral surface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCu71-Tf18wEIYZQk_69LTcRrndlKJ9uS9l_rmdBiMJZLTyfbH-4smLZJnEgCVmWVsdRTvWZ_Eu9NCAyQnF-3QVqOifL9ny2AfhapsGyw_U4nMaQUqPkxk8kOAihDCTWarXsAeZVzcD5Z5EbeYJ-8mkuJ2YrFN20vMfu80XU_resX3YenCxWvqHEdgtBaSqhv3B93PUw6c089txclsO-KH0o3CMF75Veh_ikpy42Et6cRRnvj4mEG0t_s8gmB7msLl2mZ5jE2wbX3U"/>
+</div>
+<div class="p-stack-md flex flex-col flex-grow">
+<h3 class="font-headline-md text-headline-md text-primary">Red Chilli</h3>
+<span class="text-secondary font-chinese-body text-chinese-body mb-4">红辣椒</span>
+<button class="mt-auto border border-primary text-primary px-4 py-2 text-body-sm font-semibold hover:bg-primary hover:text-on-primary transition-all rounded-lg">Request Quote</button>
+</div>
+</div>
+<!-- Fenugreek -->
+<div class="group border border-subtle bg-surface hover:shadow-lg transition-all duration-300 flex flex-col">
+<div class="aspect-[4/3] overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="Yellowish-brown fenugreek seeds. Detailed macro shot capturing the angular shape and firm texture. Professional B2B catalog style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuQXw1Gmu1HxNuphMdCn6uNEyfwoEOQVFOC9WbiEhqMpavLPQdmnnSL0A4MgeF7i7hstQmdVcigrTbD0UTtCG8ddd8arR5i_9vO5g191fuu37X5jPNIg71XlMOFsJ3xSii2QXqfHbULugfLEeTuPLR-1jZjrW7TQMHwtknKXhBtJ2Edc53QM9DdUvPybvcFxdUp6G4e6K-ZuojVhY8HDYJPst5VH6QIDRbOo65KU8AaW2qBaMw1oKhLe92_HsBWRRg2GtAemqyOSE"/>
+</div>
+<div class="p-stack-md flex flex-col flex-grow">
+<h3 class="font-headline-md text-headline-md text-primary">Fenugreek</h3>
+<span class="text-secondary font-chinese-body text-chinese-body mb-4">胡芦巴</span>
+<button class="mt-auto border border-primary text-primary px-4 py-2 text-body-sm font-semibold hover:bg-primary hover:text-on-primary transition-all rounded-lg">Request Quote</button>
+</div>
+</div>
+<!-- Cardamom -->
+<div class="group border border-subtle bg-surface hover:shadow-lg transition-all duration-300 flex flex-col">
+<div class="aspect-[4/3] overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="Bright green cardamom pods, full and ripe. The image captures the premium nature of the queen of spices. Elegant, bright lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvNnL0ZQ_09dknYI8rSGL7gdkaNPKKe01RZ42_f08jwics9lYMzLps8dh09QuO83Os3NiABFpyltWQAS3bv9i3Uy8-WJkIQAgNfuHIZYQLq9HaVx_f5g6gc9BKJrkdCGvQcwMbHzIT3kBQBAV1xZHhpvkg6Zi6QH7CLP5ZK622AS9Zs3KnfRYpEkORXTj4yxwvJIhpQpRAjsCG9XL6rWVqbws37gPEli3R1W5jiIzxpqwbj_k7OwGM1ro0wMjEWaXf2WsZ5fpJbhM"/>
+</div>
+<div class="p-stack-md flex flex-col flex-grow">
+<h3 class="font-headline-md text-headline-md text-primary">Cardamom</h3>
+<span class="text-secondary font-chinese-body text-chinese-body mb-4">小豆蔻</span>
+<button class="mt-auto border border-primary text-primary px-4 py-2 text-body-sm font-semibold hover:bg-primary hover:text-on-primary transition-all rounded-lg">Request Quote</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Choose Us -->
+<section class="py-stack-lg bg-primary text-on-primary">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="mb-stack-lg">
+<h2 class="font-headline-lg text-headline-lg">The Strategic Advantage</h2>
+<p class="opacity-70 mt-2 font-body-md">Precision. Presence. Performance.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<div class="space-y-4 p-stack-sm border-l border-primary-container">
+<span class="material-symbols-outlined text-4xl text-primary-fixed">agriculture</span>
+<h3 class="font-headline-md text-headline-md">Direct Sourcing</h3>
+<p class="opacity-80 font-body-sm">Deep-rooted procurement network directly from the farm gates of India, eliminating middlemen and ensuring cost-efficiency.</p>
+</div>
+<div class="space-y-4 p-stack-sm border-l border-primary-container">
+<span class="material-symbols-outlined text-4xl text-primary-fixed">public</span>
+<h3 class="font-headline-md text-headline-md">China-Ready Compliance</h3>
+<p class="opacity-80 font-body-sm">Meticulous alignment with GACC requirements and specialized logistics tailored for the mainland Chinese market.</p>
+</div>
+<div class="space-y-4 p-stack-sm border-l border-primary-container">
+<span class="material-symbols-outlined text-4xl text-primary-fixed">verified_user</span>
+<h3 class="font-headline-md text-headline-md">Quality Rigor</h3>
+<p class="opacity-80 font-body-sm">Quality documentation and relevant product reports can be shared with qualified buyers on request.</p>
+</div>
+<div class="space-y-4 p-stack-sm border-l border-primary-container">
+<span class="material-symbols-outlined text-4xl text-primary-fixed">inventory_2</span>
+<h3 class="font-headline-md text-headline-md">Packaging Integrity</h3>
+<p class="opacity-80 font-body-sm">Customized industrial packaging designed to preserve volatile oils and aroma during long-haul sea transit.</p>
+</div>
+<div class="space-y-4 p-stack-sm border-l border-primary-container">
+<span class="material-symbols-outlined text-4xl text-primary-fixed">monitoring</span>
+<h3 class="font-headline-md text-headline-md">Price Transparency</h3>
+<p class="opacity-80 font-body-sm">Real-time market insights and fixed pricing contracts to safeguard international buyers against volatility.</p>
+</div>
+<div class="space-y-4 p-stack-sm border-l border-primary-container">
+<span class="material-symbols-outlined text-4xl text-primary-fixed">support_agent</span>
+<h3 class="font-headline-md text-headline-md">Dedicated Support</h3>
+<p class="opacity-80 font-body-sm">Bilingual account managers (English/Mandarin) specialized in global agro-trade documentation and customs.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- India Map Section -->
+<section class="py-stack-lg bg-surface-cream relative overflow-hidden">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<div class="lg:col-span-4 space-y-4">
+<h2 class="font-headline-lg text-headline-lg text-primary">Spices Across India</h2>
+<p class="text-on-surface-variant font-body-md">Explore the geographic origins of our premium selections. Click on a marker to see regional specifics.</p>
+</div>
+<div class="lg:col-span-8 relative">
+<!-- Placeholder for India Map Interaction -->
+<div class="relative aspect-[4/5] md:aspect-video bg-surface-container rounded-xl overflow-hidden border border-subtle flex items-center justify-center p-8">
+<div class="w-full h-full relative" id="map-container">
+<img class="w-full h-full object-contain opacity-40" data-alt="A stylized, minimalist map of India on a light cream background with earthy green accents. The map shows various spice growing regions marked with subtle, elegant pin icons. The overall look is clean, professional, and informative, like a scholarly geographical document." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5kUdXJXefW39S5FekJgd3xfo4hI1hOrXoBM9WIy77fUBxfQRMYzRb4kX3_LCKHZWKC0eYAT3PDnUaStS-fLoz3R8a_oLqHdd3sXgH1oldsHwfN2zXoTruIWTHZKcxbswgJTx5fEpQzZWv9k-zlECYzFDtd9Bv7FsNpbY7xMx8DExwcIOnXULdJU_9kFkrusoUaQt2RIaG_SKHnSLuzJekngic2puQGPSxq4thDHiIRuKIId1ZLvTIlXVWHuYsNDM6KNFtDuGSSzM"/>
+<!-- Interactive Markers -->
+<div class="absolute top-[60%] left-[45%] spice-marker" onclick="toggleDrawer('turmeric')">
+<span class="material-symbols-outlined text-primary text-3xl">location_on</span>
+<div class="absolute -top-6 left-1/2 -translate-x-1/2 bg-white px-2 py-0.5 text-[10px] font-bold border border-subtle rounded whitespace-nowrap">TURMERIC</div>
+</div>
+<div class="absolute top-[80%] left-[40%] spice-marker" onclick="toggleDrawer('cardamom')">
+<span class="material-symbols-outlined text-primary text-3xl">location_on</span>
+<div class="absolute -top-6 left-1/2 -translate-x-1/2 bg-white px-2 py-0.5 text-[10px] font-bold border border-subtle rounded whitespace-nowrap">CARDAMOM</div>
+</div>
+<div class="absolute top-[30%] left-[30%] spice-marker" onclick="toggleDrawer('cumin')">
+<span class="material-symbols-outlined text-primary text-3xl">location_on</span>
+<div class="absolute -top-6 left-1/2 -translate-x-1/2 bg-white px-2 py-0.5 text-[10px] font-bold border border-subtle rounded whitespace-nowrap">CUMIN</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Slide-in Drawer -->
+<div class="fixed top-0 right-0 h-full w-full md:w-96 bg-surface z-[60] shadow-2xl border-l border-subtle translate-x-full transition-transform duration-500" id="spice-drawer">
+<div class="p-stack-md h-full flex flex-col">
+<button class="self-end p-2 hover:bg-surface-container rounded-full" onclick="toggleDrawer()">
+<span class="material-symbols-outlined">close</span>
+</button>
+<div class="mt-8 space-y-6" id="drawer-content">
+<!-- Content injected via JS -->
+</div>
+</div>
+</div>
+</section>
+<!-- Quality & Process Timeline -->
+<section class="py-stack-lg bg-background" id="quality">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="text-center mb-stack-lg">
+<h2 class="font-headline-lg text-headline-lg text-primary">The 14-Step Export Process</h2>
+<p class="text-on-surface-variant font-body-md mt-2">Uncompromising journey from the soil to the shelf.</p>
+</div>
+<div class="relative timeline-line space-y-12">
+<div class="flex flex-col md:flex-row items-center gap-8 relative z-10">
+<div class="flex-1 md:text-right hidden md:block">
+<span class="font-label-caps text-label-caps text-secondary">Step 01 - 04</span>
+<h3 class="font-headline-md text-headline-md text-primary mt-1">Sourcing & Testing</h3>
+<p class="text-body-sm text-on-surface-variant max-w-sm ml-auto">Supplier sourcing, raw material receiving, and incoming inspection.</p>
+</div>
+<div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-on-primary font-bold shadow-md">1</div>
+<div class="flex-1 md:hidden">
+<h3 class="font-headline-md text-headline-md text-primary">Sourcing & Testing</h3>
+<p class="text-body-sm text-on-surface-variant">Supplier sourcing and incoming inspection.</p>
+</div>
+<div class="flex-1 hidden md:block"></div>
+</div>
+<div class="flex flex-col md:flex-row items-center gap-8 relative z-10">
+<div class="flex-1 hidden md:block"></div>
+<div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-on-primary font-bold shadow-md">2</div>
+<div class="flex-1">
+<span class="font-label-caps text-label-caps text-secondary">Step 05 - 09</span>
+<h3 class="font-headline-md text-headline-md text-primary mt-1">Processing & Cleaning</h3>
+<p class="text-body-sm text-on-surface-variant max-w-sm">Cold-milling and magnetic cleaning to preserve essential oils.</p>
+</div>
+</div>
+<div class="flex flex-col md:flex-row items-center gap-8 relative z-10">
+<div class="flex-1 md:text-right hidden md:block">
+<span class="font-label-caps text-label-caps text-secondary">Step 10 - 14</span>
+<h3 class="font-headline-md text-headline-md text-primary mt-1">Dispatch & Global Logistics</h3>
+<p class="text-body-sm text-on-surface-variant max-w-sm ml-auto">Final inspection, dispatch coordination, and traceability records.</p>
+</div>
+<div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-on-primary font-bold shadow-md">3</div>
+<div class="flex-1 md:hidden">
+<h3 class="font-headline-md text-headline-md text-primary">Dispatch & Logistics</h3>
+<p class="text-body-sm text-on-surface-variant">Global tracking and airtight sealing.</p>
+</div>
+<div class="flex-1 hidden md:block"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Certifications -->
+<section class="py-stack-lg bg-surface-container" id="certifications">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-end mb-stack-lg">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary">Global Compliance</h2>
+<p class="text-on-surface-variant font-body-md">Verified for international food safety standards.</p>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter">
+<div class="bg-surface p-8 border border-subtle flex flex-col items-center justify-center text-center space-y-4 rounded-lg">
+<div class="w-20 h-20 bg-surface-container-low rounded-full flex items-center justify-center font-bold text-primary">FSSAI</div>
+<span class="font-label-caps text-label-caps text-on-surface-variant">Available on request</span>
+</div>
+<div class="bg-surface p-8 border border-subtle flex flex-col items-center justify-center text-center space-y-4 rounded-lg">
+<div class="w-20 h-20 bg-surface-container-low rounded-full flex items-center justify-center font-bold text-primary">GACC</div>
+<span class="font-label-caps text-label-caps text-secondary">In Progress</span>
+</div>
+<div class="bg-surface p-8 border border-subtle flex flex-col items-center justify-center text-center space-y-4 rounded-lg">
+<div class="w-20 h-20 bg-surface-container-low rounded-full flex items-center justify-center font-bold text-primary">APEDA</div>
+<span class="font-label-caps text-label-caps text-on-surface-variant">Available on request</span>
+</div>
+<div class="bg-surface p-8 border border-subtle flex flex-col items-center justify-center text-center space-y-4 rounded-lg">
+<div class="w-20 h-20 bg-surface-container-low rounded-full flex items-center justify-center font-bold text-primary">SPICES BD</div>
+<span class="font-label-caps text-label-caps text-on-surface-variant">Under review</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-stack-lg bg-surface-cream" id="contact">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-margin-desktop">
+<div class="space-y-stack-md">
+<h2 class="font-headline-lg text-headline-lg text-primary">Establish a Partnership</h2>
+<p class="text-on-surface-variant font-body-lg">Begin your procurement journey with a consultation from our experts.</p>
+<div class="space-y-8 pt-4">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<div>
+<h4 class="font-bold text-on-surface">Registered Address</h4>
+<p class="text-on-surface-variant font-body-sm">ANIYMP INTERNATIONAL<br/>U74999TN2020PTC139080<br/>No. 81A, Sri Krishna Builders, 5th Street, Barathi Nagar, West Tambaram, Old Perungalathur, Tamil Nadu 600063, India.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary">mail</span>
+<div>
+<h4 class="font-bold text-on-surface">Global Enquiries</h4>
+<p class="text-on-surface-variant font-body-sm">exports@aniymp.com<br/>support@aniymp.com</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface border border-subtle p-stack-md rounded-lg shadow-sm">
+<form class="space-y-4">
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-1">
+<label class="font-label-caps text-label-caps text-on-surface-variant block uppercase">Full Name</label>
+<input class="w-full bg-white border border-subtle p-3 text-body-sm focus:ring-2 focus:ring-primary focus:border-primary transition-all outline-none" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-1">
+<label class="font-label-caps text-label-caps text-on-surface-variant block uppercase">Company</label>
+<input class="w-full bg-white border border-subtle p-3 text-body-sm focus:ring-2 focus:ring-primary focus:border-primary transition-all outline-none" placeholder="Global Trade Ltd." type="text"/>
+</div>
+</div>
+<div class="space-y-1">
+<label class="font-label-caps text-label-caps text-on-surface-variant block uppercase">Email Address</label>
+<input class="w-full bg-white border border-subtle p-3 text-body-sm focus:ring-2 focus:ring-primary focus:border-primary transition-all outline-none" placeholder="buyer@company.com" type="email"/>
+</div>
+<div class="space-y-1">
+<label class="font-label-caps text-label-caps text-on-surface-variant block uppercase">Interested Product</label>
+<select class="w-full bg-white border border-subtle p-3 text-body-sm focus:ring-2 focus:ring-primary focus:border-primary transition-all outline-none">
+<option>Select a Spice</option>
+<option>Turmeric</option>
+<option>Red Chilli</option>
+<option>Cardamom</option>
+<option>Other Agro Products</option>
+</select>
+</div>
+<div class="space-y-1">
+<label class="font-label-caps text-label-caps text-on-surface-variant block uppercase">Message</label>
+<textarea class="w-full bg-white border border-subtle p-3 text-body-sm focus:ring-2 focus:ring-primary focus:border-primary transition-all outline-none" placeholder="Outline your quantity requirements and target market..." rows="4"></textarea>
+</div>
+<button class="w-full bg-primary text-on-primary py-4 font-bold text-body-md hover:opacity-90 transition-all rounded-lg mt-4">Submit Enquiry</button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary text-on-primary">
+<div class="max-w-container-max mx-auto px-margin-desktop py-stack-lg flex flex-col md:flex-row justify-between items-start gap-gutter">
+<div class="space-y-4">
+<div class="font-headline-md text-headline-md text-on-primary-container font-bold">ANIYMP INTERNATIONAL</div>
+<p class="max-w-xs opacity-70 font-body-sm text-on-primary-fixed-variant">Curating India's agricultural finest for the global B2B marketplace. Specialized in high-compliance spice exports.</p>
+</div>
+<div class="grid grid-cols-2 gap-gutter">
+<div class="space-y-2">
+<h5 class="font-bold text-on-tertiary-fixed">Navigation</h5>
+<nav class="flex flex-col space-y-1">
+<a class="text-on-primary-fixed-variant hover:text-on-primary hover:underline decoration-secondary transition-all font-body-sm" href="#">Home</a>
+<a class="text-on-primary-fixed-variant hover:text-on-primary hover:underline decoration-secondary transition-all font-body-sm" href="#about">About Us</a>
+<a class="text-on-primary-fixed-variant hover:text-on-primary hover:underline decoration-secondary transition-all font-body-sm" href="#products">Products</a>
+<a class="text-on-primary-fixed-variant hover:text-on-primary hover:underline decoration-secondary transition-all font-body-sm" href="#contact">Contact</a>
+</nav>
+</div>
+<div class="space-y-2">
+<h5 class="font-bold text-on-tertiary-fixed">Legal</h5>
+<nav class="flex flex-col space-y-1">
+<a class="text-on-primary-fixed-variant hover:text-on-primary hover:underline decoration-secondary transition-all font-body-sm" href="#">Privacy Policy</a>
+<a class="text-on-primary-fixed-variant hover:text-on-primary hover:underline decoration-secondary transition-all font-body-sm" href="#">Terms of Service</a>
+<a class="text-on-primary-fixed-variant hover:text-on-primary hover:underline decoration-secondary transition-all font-body-sm" href="#">Compliance</a>
+<a class="text-on-primary-fixed-variant hover:text-on-primary hover:underline decoration-secondary transition-all font-body-sm" href="#">Global Trade Policy</a>
+</nav>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop border-t border-primary-container py-stack-sm flex justify-between items-center text-[12px] opacity-60">
+<span>© 2024 ANIYMP INTERNATIONAL. CIN: U74999TN2020PTC139080. All Rights Reserved.</span>
+<div class="flex gap-4">
+<span class="material-symbols-outlined cursor-pointer">language</span>
+<span class="material-symbols-outlined cursor-pointer">help</span>
+</div>
+</div>
+</footer>
+<script>
+        const spiceData = {
+            turmeric: {
+                title: "Turmeric (姜黄)",
+                regions: "Tamil Nadu (Erode), Andhra Pradesh, Maharashtra",
+                harvest: "January - March",
+                health: "Contains Curcumin with profound antioxidant and anti-inflammatory properties.",
+                image: "https://images.unsplash.com/photo-1615485290382-441e4d049cb5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+            },
+            cardamom: {
+                title: "Cardamom (小豆蔻)",
+                regions: "Kerala (Idukki), Karnataka, Tamil Nadu",
+                harvest: "August - February",
+                health: "Aids digestion and has diuretic properties. Rich in essential minerals.",
+                image: "https://images.unsplash.com/photo-1611097555173-958a74e0d473?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+            },
+            cumin: {
+                title: "Cumin (孜然)",
+                regions: "Gujarat, Rajasthan",
+                harvest: "February - March",
+                health: "Promotes digestion and improves immunity. High in iron content.",
+                image: "https://images.unsplash.com/photo-1621459424846-993f41639f28?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+            }
+        };
+
+        function toggleDrawer(spiceKey) {
+            const drawer = document.getElementById('spice-drawer');
+            const content = document.getElementById('drawer-content');
+            
+            if (spiceKey) {
+                const data = spiceData[spiceKey];
+                content.innerHTML = `
+                    <img src="${data.image}" class="w-full h-48 object-cover rounded-lg border border-subtle">
+                    <h3 class="font-headline-lg text-primary">${data.title}</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <span class="font-label-caps text-secondary block uppercase">Primary Regions</span>
+                            <p class="text-on-surface font-medium">${data.regions}</p>
+                        </div>
+                        <div>
+                            <span class="font-label-caps text-secondary block uppercase">Harvest Period</span>
+                            <p class="text-on-surface font-medium">${data.harvest}</p>
+                        </div>
+                        <div class="p-4 bg-surface-container rounded">
+                            <span class="font-label-caps text-primary block uppercase mb-1">Health Value</span>
+                            <p class="text-body-sm text-on-surface-variant">${data.health}</p>
+                        </div>
+                    </div>
+                    <button class="w-full bg-primary text-on-primary py-3 rounded-lg font-bold mt-4">Download Technical Datasheet</button>
+                `;
+                drawer.classList.remove('translate-x-full');
+            } else {
+                drawer.classList.add('translate-x-full');
+            }
+        }
+
+        // Close drawer on outside click
+        window.onclick = function(event) {
+            const drawer = document.getElementById('spice-drawer');
+            if (event.target == drawer) {
+                toggleDrawer();
+            }
+        }
+    </script>
+</body></html>

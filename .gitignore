@@ -1,0 +1,33 @@
+# Sensitive project notes
+ANIYMP_CODEX_PROJECT_CONTEXT_REVISED.md
+
+# Original/source asset archives and generated deployment packages
+*.zip
+aniymp-cloudflare-pages-deploy/
+certificate-originals-backup/
+
+# Local environment and secrets
+.env
+.env.*
+*.local
+
+# OS/editor/cache files
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Node/build artifacts if the project is later converted to a build pipeline
+node_modules/
+dist/
+build/
+.next/
+out/
+coverage/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
