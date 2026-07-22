@@ -1,40 +1,128 @@
-# 🌶️ ANIYMP International B2B Export Portal
+# ANIYMP Export Portal
 
-A professional, full-stack B2B export platform designed to showcase and facilitate the international trade of premium Indian spices. This project demonstrates my ability to build a production-ready web presence with a focus on SEO, high-end aesthetics, and automated backend workflows.
+> **Portfolio Showcase Only**
+>
+> This repository is shared for educational and portfolio purposes only. ANIYMP Export Portal was developed as my first full-stack project for a company. Unauthorized copying, redistribution, or commercial use of this code is strictly prohibited.
 
-## 🚀 Project Overview
-As a student developer, I built this project to bridge the gap between traditional spice exporting and modern digital commerce. The goal was to create a high-trust portal that handles product discovery, compliance verification, and automated lead generation.
+---
 
-### Key Features
-- **B2B Export Catalog**: Structured product showcases for various spice categories.
-- **Compliance & Certification**: Dedicated sections for international trade certifications to build buyer trust.
-- **Automated Quote System**: A backend worker designed to handle and process "Request a Quote" inquiries.
-- **SEO Optimized**: Includes a custom `sitemap.xml` and `robots.txt` for global search visibility.
-- **Responsive Design**: Mobile-first approach for international buyers accessing the portal on any device.
+## About the Project
 
-## 🛠️ Tech Stack
-- **Frontend**: HTML5, CSS3 (Modern layout patterns), JavaScript.
-- **Backend**: Node.js / Cloudflare Workers (via `quote-worker.js`).
-- **Database**: SQL (Structured schema for order and product management).
-- **Deployment**: Cloudflare Pages / Workers.
+ANIYMP Export Portal is a full-stack web application designed to simplify and manage export-related business operations.
 
-## 📂 Project Structure
-- `/stitch-export`: Frontend architecture, including the a-aesthetic digital curator and product pages.
-- `/backend`: Serverless logic for processing quotes and database schema.
+This project holds a special place in my journey as a developer because it was my first opportunity to work on a real-world company project. From designing the user interface to implementing backend services and integrating the database, this application helped me understand what it means to build software for actual users and business needs.
 
-## ⚙️ Setup & Installation
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/sachin0610-srm/aniymp-export-portal.git
-   ```
-2. **Backend Setup**:
-   - Refer to `backend/wrangler.toml.example` to configure your environment variables.
-   - Apply the database schema using `backend/schema.sql`.
-3. **Frontend**:
-   - Open the files in `/stitch-export` in any browser or deploy via Cloudflare Pages.
+---
 
-## 🎓 Learning Outcomes
-Through this project, I mastered:
-- **Full-Stack Integration**: Connecting a high-fidelity frontend with a serverless backend.
-- **Security Best Practices**: Implementing `.gitignore` to protect sensitive API keys and secrets.
-- **B2B UX Design**: Understanding the specific needs of international trade buyers (trust, certifications, bulk quotes).
+## Key Highlights
+
+* My first end-to-end full-stack project.
+* Developed for a real company use case.
+* Built using modern web technologies.
+* Implemented frontend, backend, and database integration.
+* Focused on usability, security, and performance.
+* Gained hands-on experience with production workflows.
+
+---
+
+## Features
+
+* User Authentication & Authorization
+* Dashboard Management
+* Export Workflow Handling
+* Data Management & Reporting
+* Responsive User Interface
+* Secure Backend APIs
+* Database Integration
+
+---
+
+## Tech Stack
+
+| Category        | Technologies        |
+| --------------- | ------------------- |
+| Frontend        | React.js            |
+| Backend         | Node.js, Express.js |
+| Database        | MySQL               |
+| Version Control | Git & GitHub        |
+| APIs            | REST APIs           |
+
+> **Note:** All sensitive configurations, credentials, company assets, and proprietary information have been removed from this repository.
+
+---
+
+## Project Structure
+
+```text
+ANIYMP-EXPORT-PORTAL/
+│
+├── frontend/
+├── backend/
+├── public/
+├── src/
+├── database/
+└── README.md
+```
+
+---
+
+## Learning Outcomes
+
+Through this project, I gained experience in:
+
+* Full-Stack Development
+* API Design & Integration
+* Database Management
+* Authentication & Authorization
+* Git & GitHub Workflow
+* Debugging & Testing
+* Understanding Real-World Client Requirements
+* Building Production-Oriented Applications
+
+---
+
+## Security & Privacy
+
+To maintain security and confidentiality:
+
+* Environment variables (`.env`) have been removed.
+* API keys and credentials are not included.
+* Company-specific information has been excluded.
+* Sensitive business logic and configurations have been omitted.
+
+---
+
+## Important Notice
+
+> **This repository is NOT open source.**
+
+* This project is maintained solely as a portfolio showcase.
+* Please do not copy, redistribute, or reuse this project.
+* External contributions are not being accepted.
+* Any unauthorized use of this repository or its contents is prohibited.
+
+---
+
+## License
+
+### All Rights Reserved © 2026 Sachin Kumar
+
+This project and its source code are proprietary.
+
+Permission is **not granted** to use, copy, modify, merge, publish, distribute, sublicense, or sell copies of this software without prior written consent from the author.
+
+See the `LICENSE` file for additional information.
+
+---
+
+## Author
+
+### **Sachin Kumar**
+
+* B.Tech CSE (AI & ML), SRM University
+* Full-Stack Developer
+* Interested in AI, Machine Learning, and Real-World Software Development
+
+---
+
+> *"ANIYMP Export Portal was the project that taught me how to transform ideas into software that solves real business problems."*
